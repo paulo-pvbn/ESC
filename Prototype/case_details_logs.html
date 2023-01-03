@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".dropdown-item").forEach((dropItem) => {
+                dropItem.addEventListener("click", function(event) {
+                    console.log(this.dataset.file);
+                    document.querySelector("#select-evidence-btn").textContent = this.dataset.file;
+                });
+            });
+        });
+
+    </script>
+
+    <title>ESC - Evicence Safe Chain</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="esc-nav-group" id="nav-logo">
+                <a class="e-nav-link" id="logo-link" href="/" title="Evidence Secure Chain"><img src="images/logo.svg" id="logo" alt="logo"></a> <a class="e-nav-link-logo" href="/" title="Evidence Secure Chain">ESC</a>
+            </div>
+            <div class="esc-nav-group" id="nav-left">
+                <a class="e-nav-link" href="cases.html">Cases</a>
+                <a class="e-nav-link">Access Control</a>
+            </div>
+            <div id="nav-center">
+
+            </div>
+            <div class="esc-nav-group" id="nav-right">
+                <a class="e-nav-link" href="register.html">Register</a>
+                <a class="e-nav-link" href="login.html">Login</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="esc-container">
+            <div id="esc-page-title">
+
+                <img src="images/scale.svg" id="esc-title-icon" alt="Security Icon">
+
+                <div id="esc-title-text">
+                    <h2>Case 002 - Golden Eye</h2>
+                </div>
+            </div>
+            <div class="esc-section">
+                <ul class="nav nav-tabs esc-nav-tabs" id="casosTab" role="tablist">
+                    <!-- style="border-color: darkgrey;" -->
+                    <li class="nav-item esc-nav-item" role="presentation">
+                        <a class="nav-link esc-nav-link" aria-current="page" href="case_details_proc.html" id="proc-tab">Procedure <i class="fa fa-balance-scale" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="nav-item esc-nav-item" role="presentation">
+                        <a class="nav-link esc-nav-link" href="case_details_evid.html" id="evid-tab">Evidences <i class="fa fa-book" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="nav-item  esc-nav-item" role="presentation">
+                        <a class="nav-link esc-nav-link active" href="case_details_logs.html" id="logs-tab">Logs / Chain of Custody <i class="fa fa-arrows-alt" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="logs-tab-pane" role="tabpanel" aria-labelledby="logs-tab" tabindex="0">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                            id="select-evidence-btn">
+                              All Case Evidences / Files
+                            </button>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" data-file="All Case Evidences / Files" selected>All Case Evidences / Files</a></li>
+                              <li><a class="dropdown-item" data-file="MailBoxJohnDoe.zip">MailBoxJohnDoe.zip</a></li>
+                              <li><a class="dropdown-item" data-file="MailBoxSuzieQ.zip">MailBoxSuzieQ.zip</a></li>
+                              <li><a class="dropdown-item" data-file="CloudDocsJoker.zip">CloudDocsJoker.zip</a></li>
+                            </ul>
+                          </div>
+                        
+
+                            <div class="esc-table" id="cases-table">
+                                <!-- header -->
+                                <div class="ecs-tr-logs">
+                                    <div class="ecs-th"><span class="ecs-tcontend">File Name</span></div>
+                                    <div class="ecs-th"><span class="ecs-tcontend">Operation</span></div>
+                                    <div class="ecs-th"><span class="ecs-tcontend">Date/Time</span></div>
+                                    <div class="ecs-th"><span class="ecs-tcontend ecs-tactions">User</span></div>
+                                </div>
+                                <!-- body -->
+            
+                                <div class="ecs-tr ecs-tr-logs">
+                                    <div class="ecs-td"><span class="ecs-tcontend">MailBoxJohnDoe.zip</span></div>
+                                    <div class="ecs-td"><span class="ecs-tcontend">Registered for Download</span></div>
+                                    <div class="ecs-td"><span class="ecs-tcontend">2022-12-22 01:38:00
+                                    </span></div>
+                                    <div class="ecs-td"><span class="ecs-tcontend ecs-tactions">John Rambo</span></div>
+                                </div>
+            
+                                <div class="ecs-tr ecs-tr-logs">
+                                    <div class="ecs-td"><span class="ecs-tcontend">MailBoxJohnDoe.zip</span></div>
+                                    <div class="ecs-td"><span class="ecs-tcontend">Downloaded into Database and Checked</span></div>
+                                    <div class="ecs-td"><span class="ecs-tcontend">2022-12-22 01:38:00
+                                    </span></div>
+                                    <div class="ecs-td"><span class="ecs-tcontend ecs-tactions">SYSTEM</span></div>
+                                </div>
+
+                                <div class="ecs-tr ecs-tr-logs">
+                                    <div class="ecs-td"><span class="ecs-tcontend">MailBoxJohnDoe.zip</span></div>
+                                    <div class="ecs-td"><span class="ecs-tcontend">Downloaded by User</span></div>
+                                    <div class="ecs-td"><span class="ecs-tcontend">2022-12-22 01:38:00
+                                    </span></div>
+                                    <div class="ecs-td"><span class="ecs-tcontend ecs-tactions">Sherlock Holmes (Gov Officer)</span></div>
+                                </div>
+
+
+                                <div class="ecs-tr ecs-tr-logs">
+                                    <div class="ecs-td"><span class="ecs-tcontend">MailBoxJohnDoe.zip</span></div>
+                                    <div class="ecs-td"><span class="ecs-tcontend">Downloaded by User</span></div>
+                                    <div class="ecs-td"><span class="ecs-tcontend">2022-12-22 01:38:00
+                                    </span></div>
+                                    <div class="ecs-td"><span class="ecs-tcontend ecs-tactions">Tow Matter (Lawyer)</span></div>
+                                </div>
+            
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>ESC - Evicence Safe Chain</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="esc-nav-group" id="nav-logo">
+                <a class="e-nav-link" id="logo-link" href="/" title="Evidence Secure Chain"><img src="images/logo.svg" id="logo" alt="logo"></a> <a class="e-nav-link-logo" href="/" title="Evidence Secure Chain">ESC</a>
+            </div>
+            <div class="esc-nav-group" id="nav-left">
+                <a class="e-nav-link" href="cases.html">Cases</a>
+                <a class="e-nav-link">Access Control</a>
+            </div>
+            <div id="nav-center">
+
+            </div>
+            <div class="esc-nav-group" id="nav-right">
+                <a class="e-nav-link" href="register.html">Register</a>
+                <a class="e-nav-link" href="login.html">Login</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="esc-container">
+            <div id="esc-page-title">
+
+                <img src="images/scale.svg" id="esc-title-icon" alt="Security Icon">
+
+                <div id="esc-title-text">
+                    <h2>Case 002 - Golden Eye</h2>
+                </div>
+            </div>
+            <div class="esc-section">
+                <ul class="nav nav-tabs esc-nav-tabs" id="casosTab" role="tablist">
+                    <!-- style="border-color: darkgrey;" -->
+                    <li class="nav-item esc-nav-item" role="presentation">
+                        <a class="nav-link esc-nav-link active" aria-current="page" href="case_details_proc.html" id="proc-tab">Procedure <i class="fa fa-balance-scale" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="nav-item esc-nav-item" role="presentation">
+                        <a class="nav-link esc-nav-link" href="case_details_evid.html" id="evid-tab">Evidences <i class="fa fa-book" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="nav-item  esc-nav-item" role="presentation">
+                        <a class="nav-link esc-nav-link" href="case_details_logs.html" id="logs-tab">Logs / Chain of Custody <i class="fa fa-arrows-alt" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="proc-tab-pane" role="tabpanel" aria-labelledby="proc-tab" tabindex="0">
+
+                        <div class="esc-form-container caseproc-form-container">
+                            <form action="/myfutureAWSApp/contact" METHOD="POST" id="contact-form">
+                                <input type="hidden" name="csrfmiddlewaretoken" value="Eh2nOggi3LGwZQIuQKk0HYNMzTIcAQsiPndJo2eZHiUyapQKPFD0VH58RE9VIPBm">
+
+                                <div class="esc-table" id="caseproc-table">
+                                    <!-- header -->
+                                    <div class="ecs-tr-casoprocform">
+                                        <div class="ecs-th"><span class="ecs-tcontend">
+                                                <label for="name">Name:</label>
+                                        </span></div>
+                                        <div class="ecs-th"><span class="ecs-tcontend">
+                                                <input autocomplete="off" autofocus class="form-control esc-input reset-on-change" id="name" minlength="5" name="name" 
+                                                placeholder="Name for the Crinminal Case / Operation" type="text">
+                                        </span></div>
+                                    </div>
+                                    <div class="ecs-tr-casoprocform">
+                                        <div class="ecs-th"><span class="ecs-tcontend">
+                                                <label for="procnum">Process/Procedure Number:</label>
+                                        </span></div>
+                                        <div class="ecs-th"><span class="ecs-tcontend">
+                                                <input autocomplete="off" autofocus class="form-control esc-input reset-on-change" id="procnum" minlength="5" name="procnum" 
+                                                placeholder="Indentifying Number in Court or Police Department" type="text">
+                                        </span></div>
+                                    </div>
+                                    <div class="ecs-tr-casoprocform">
+                                        <div class="ecs-th"><span class="ecs-tcontend">
+                                                <label for="creationDate">Creation:</label>
+                                        </span></div>
+                                        <div class="ecs-th"><span class="ecs-tcontend">
+                                                Created by user John Doe on 2022-12-23 13:34:56
+                                        </span></div>
+                                    </div>
+                                    <div class="ecs-tr-casoprocform">
+                                        <div class="ecs-th"><span class="ecs-tcontend">
+                                                
+                                        </span></div>
+                                        <div class="ecs-th"><span class="ecs-tcontend">
+                                            <button class="btn btn-outline-light px-5 esc-button" type="submit">
+                                                Save <i class="fa fa-check" aria-hidden="true"></i>
+                                            </button>
+                                        </span></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

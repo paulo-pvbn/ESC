@@ -1,0 +1,719 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(Roboto-Regular.ttf);
+}
+
+body {
+    font-family: Roboto;
+}
+
+
+/*NAVBAR - BEGIN
+#========================================================*/
+
+nav {
+    display: grid;
+    grid-template-columns: 140px 330px auto 330px;
+    height: 80px;
+    width: 100%;
+    margin: 0;
+    background-color: rgb(0, 0, 0, 0.5);
+    color: white;
+    font-size: 18px;
+    position: relative;
+}
+
+.esc-nav-group {
+    display: inline-block;
+    /* border: 1px solid red; */
+    display: table;
+}
+
+.esc-nav-group:hover {
+    background-color: red;
+}
+
+.e-nav-link {
+    text-decoration: none;
+    color: white;
+    margin: auto;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    /* border: 1px solid orange; */
+    width: 165px;
+    height: 80px;
+}
+
+@keyframes grow-link {
+    from {
+        font-size: 1rem;
+    }
+    to {
+        font-size: 1.5rem;
+    }
+}
+
+.e-nav-link:hover {
+    text-decoration: none;
+    color: white;
+    /* needed for anchors without href */
+    cursor: pointer;
+    animation-name: grow-link;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+#logo {
+    display: inline-block;
+    width: 60px;
+    text-align: left;
+    padding-left: 20px;
+    /* border: 1px solid blue; */
+}
+
+#logo-img-link {
+    width: 50px;
+}
+
+.e-nav-link-logo {
+    text-decoration: none;
+    color: white;
+    margin: auto;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+    /* border: 1px solid yellow; */
+    width: 165px;
+    height: 80px;
+}
+
+.e-nav-link-logo:hover {
+    text-decoration: none;
+    color: white;
+    /* needed for anchors without href */
+    cursor: pointer;
+    animation-name: grow-link;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+
+/*NAVBAR - END
+#========================================================*/
+
+
+/*MAIN CONTAINER - BEGIN
+#========================================================*/
+
+main {
+    width: 100%;
+    color: black;
+    position: relative;
+    margin-top: 20px;
+    height: 80vh;
+
+    animation-name: fade-in;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    
+    /* animation triggered by the javascript links */
+    animation-play-state: running;
+}
+
+/* Animations for page transitions - triggered and alternated by JavaScript */
+@keyframes fade-in {
+    from {
+     opacity: 0;
+    }
+ 
+    to {
+     opacity: 1;
+    }
+ }
+
+ @keyframes fade-out {
+    from {
+     opacity: 1;
+    }
+ 
+    to {
+     opacity: 0;
+    }
+}
+
+body::before {
+    content: "";
+    background-image: url("../images/bckg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.jumbotron {
+    width: 100%;
+    height: 80vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.esc-container {
+    margin: 0 10px 0 30px;
+}
+
+.esc-fullscreen-container {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+}
+
+
+/* Makes title and content section responsive to different screen sizes */
+
+@media(max-width: 1200px) {
+    #esc-page-title,
+    .esc-section {
+        width: 100%;
+        margin-right: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media(min-width: 1201px) {
+    #esc-page-title,
+    .esc-section {
+        width: 80%;
+    }
+}
+
+
+/* Title bar - BEGIN 
+----------------------------------------*/
+
+#esc-page-title {
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+    /* width: 80%; */
+    /* use flex to vertically align elements 
+    It eliminates the need for display: inline for the child elements
+    such as the h2.
+    */
+    display: flex;
+}
+
+
+/* Components of the title bar */
+
+
+/* 1 - Icon */
+
+#esc-title-icon {
+    width: 50px;
+    height: 50px;
+    /* minor valign adjustement */
+    padding-bottom: 3px;
+}
+
+#esc-title-icon,
+#esc-title-text,
+.esc-button-container {
+    /* make all components of title bar align vertically */
+    margin: auto 0;
+}
+
+
+/* 2 - Title Texzt */
+
+#esc-title-text {
+    /* prevents title text of wrapping into multiple lines */
+    min-width: 500px;
+    padding-left: 10px;
+}
+
+.esc-button-container {
+    width: 100%;
+    text-align: right;
+}
+
+.esc-button:hover {
+    background-color: red !important;
+    color: white;
+}
+
+.esc-section,
+#login-section {
+    padding-top: 20px;
+}
+
+
+/*MAIN CONTAINER - END
+#========================================================*/
+
+
+/*REGISTER AND LOGIN FORM - BEGIN
+==========================================================*/
+
+
+/* Contact Form */
+
+#login-section {
+    /* width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex; */
+    margin: auto;
+}
+
+.esc-form-container,
+#login-form-container {
+    background-color: rgb(0, 0, 0, 0.5);
+    color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 20px 0 0 10px;
+    animation-name: fade-out;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    /* animation triggered by the javascript links */
+    animation-play-state: paused;
+}
+
+#login-form-container {
+    width: 400px;
+    margin: auto;
+    border: 1px solid rgb(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 0;
+}
+
+
+/* Make jumbotron responsive to different screen sizes */
+
+@media(max-width: 1200px) {
+    .esc-form-container {
+        width: 90%;
+        margin: 0 100px 0 0px;
+    }
+}
+
+@media(min-width: 1201px) {
+    .esc-form-container {
+        width: 60%;
+        margin: 0 0 0 0px;
+    }
+}
+
+#id_content {
+    /*height: 90vh;*/
+    width: 100%;
+}
+
+.esc-input {
+    width: 100%;
+}
+
+input[readonly] {
+    background-color: lightgrey;
+}
+
+th,
+td {
+    vertical-align: middle;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    text-align: left;
+}
+
+label {
+    color: white;
+}
+
+#send-button {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+#send-button:hover {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+#send-icon {
+    width: 20px;
+    height: 20px;
+    margin: auto;
+}
+
+.message-confirm-container {
+    width: 100%;
+    text-align: left;
+    margin: 0 auto;
+    color: white;
+}
+
+label {
+    font-family: Roboto;
+    font-weight: normal;
+}
+
+#login-form-table {
+    margin: auto;
+    width: 100%;
+}
+
+#form-header {
+    display: table;
+    width: 100%;
+}
+
+#form-body {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 5px;
+}
+
+#login-form-title {
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    height: 50px;
+    margin-bottom: 20px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#esc-login-icon,
+#login-title {
+    margin: auto;
+    vertical-align: middle;
+}
+
+#esc-login-icon {
+    width: 30px;
+}
+
+
+/*REGISTER FORM - END
+==========================================================*/
+
+
+/*GENERIC TABLE GRID - BEGIN
+==========================================================*/
+
+.esc-table {
+    width: 100%;
+    color: white;
+    /* background-color: rgb(0, 0, 0, 0.5); */
+}
+
+#evit-table, #hist-table, #cases-table {
+    background-color: rgb(0, 0, 0, 0.5)
+}
+
+
+
+/* esc-tr is the mother class for all table rows
+after it are all its subclasses. Each subclass must specify a grid layout for the row */
+
+.ecs-tr,
+.ecs-tr-cases,
+.ecs-tr-casoprocform,
+.ecs-tr-filepond,
+.ecs-tr-evidences,
+.ecs-tr-logs {
+    width: 100%;
+    display: grid;
+    /* grid-template-columns: 10% 30% 30% 30%; */
+    height: 50px;
+}
+
+.ecs-th,
+.ecs-td {
+    display: table;
+    padding-left: 20px;
+}
+
+.ecs-th {
+    font-weight: bold;
+}
+
+.ecs-tcontend {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.ecs-textarea-label {
+    vertical-align: top;
+    padding-top: 5px;
+}
+
+.ecs-tr:hover {
+    background-color: red;
+    color: white;
+}
+
+.ecs-tactions {
+    text-align: center;
+}
+
+.esc-list-btn {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid rgb(0, 0, 0, 0);
+    color: white;
+    padding-top: 12px;
+    font-size: 18px;
+    background-color: rgb(0, 0, 0, 0);
+}
+
+.esc-list-btn:hover {
+    background-color: white;
+    color: red;
+    cursor: pointer;
+}
+
+.esc-table-footer {
+    margin-top: 30px;
+}
+
+
+/*GENERIC TABLE GRID - END
+==========================================================*/
+
+
+/* CASES LIST */
+
+.ecs-tr-cases {
+    grid-template-columns: 10% 30% 30% 30%;
+}
+
+/*#cases-table {
+    background-color: rgb(0, 0, 0, 0.5);
+}*/
+
+
+/* CASES DETAIL CONTAINER - BEGIN
+===============================*/
+
+.esc-nav-tabs {
+    border-color: darkgrey !important;
+    background-color: rgb(0, 0, 0, 0.5);
+    color: white;
+}
+
+.esc-nav-item {
+    display: inherit;
+}
+
+.esc-nav-link {
+    color: white !important;
+    text-decoration: none !important;
+    ;
+}
+
+.esc-nav-link:hover {
+    color: white !important;
+    ;
+    text-decoration: none !important;
+    ;
+}
+
+.esc-nav-tabs .active {
+    background-color: red !important;
+    color: rgb(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+[role="tabpanel"] {
+    background-color: rgb(0, 0, 0, 0.25);
+    min-height: 500px;
+}
+
+.nav-link .fa {
+    padding-left: 5px;
+}
+
+
+/* CASES DETAIL CONTAINER - END
+===============================*/
+
+
+/* CASES DETAIL - PROCEDURE - BEGIN 
+====================*/
+
+.ecs-tr-casoprocform {
+    grid-template-columns: 25% 75%;
+    height: 70px;
+}
+
+.caseproc-form-container {
+    padding: 40px 20px 20px 20px;
+}
+
+
+/* CASES DETAIL - PROCEDURE - END 
+====================*/
+
+
+/* CASES DETAIL - EVIDENCE - BEGIN 
+====================*/
+
+#expand-form-btn {
+    font-weight: bold;
+}
+
+#evid-tab-pane {
+    padding-top: 10px;
+}
+
+#expand-form-btn:hover {
+    background-color: rgb(0, 0, 0, 0.5);
+    color: white;
+}
+
+#expand-form-btn.expanded {
+    background-color: rgb(0, 0, 0, 0.5);
+    color: white;
+}
+
+#textarea-hash-row {
+    margin-top: 15px;
+}
+
+.ecs-tr-filepond {
+    grid-template-columns: 25% 75%;
+    height: 100px;
+}
+
+.ecs-tr-evidences {
+    grid-template-columns: 40% 10% 30% 20%;
+}
+
+
+/*FILEPONT STYLES - BEGIN
+================*/
+
+
+/**
+                * FilePond Custom Styles
+                */
+
+.filepond--root {
+    height: 80px;
+}
+
+.filepond--drop-label {
+    color: black
+}
+
+.filepond--label-action {
+    text-decoration-color: lightgray;
+    font-weight: bold;
+}
+
+.filepond--panel-root {
+    border-radius: 2em;
+    background-color: red;
+    height: 1em;
+}
+
+.filepond--item-panel {
+    background-color: #595e68;
+}
+
+.filepond--drip-blob {
+    background-color: #7f8a9a;
+}
+
+#file-container {
+    margin-top: 10px;
+}
+
+
+/*FILEPONT STYLES - END
+================*/
+
+.modal-content {
+    background-color: rgba(97, 94, 94, 0.75);
+    color: white !important;
+}
+
+#esc-loading-modal {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+#esc-loading-modal .modal-content {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+
+#upload-form {
+    display: none;
+}
+
+#url-form {
+    display: none;
+}
+
+
+/*EVIDENCES - END */
+
+
+/*LOGS - BEGIN 
+=====================*/
+
+.ecs-tr-logs {
+    grid-template-columns: 30% 30% 15% 25%;
+}
+
+#select-evidence-btn {
+    font-weight: bold;
+}
+
+#select-evidence-btn:hover {
+    background-color: red;
+    color: white;
+}
+
+#select-evidence-btn[aria-expanded='true'] {
+    background-color: red;
+    color: white;
+}
+
+.dropdown-menu {
+    background-color: darkgray !important;
+}
+
+.dropdown-item {
+    color: white !important;
+}
+
+.dropdown-item:hover {
+    background-color: red !important;
+    color: white;
+    cursor: pointer;
+}

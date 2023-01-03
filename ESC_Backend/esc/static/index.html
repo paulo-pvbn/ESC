@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/filepond/dist/filepond.js"></script>
+
+    <script src="/static/scripts/components.js" defer></script>
+    <script src="/static/scripts/app.js" defer></script>
+
+    <title>ESC - Evicence Safe Chain</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="esc-nav-group" id="nav-logo">
+                <a class="e-nav-link" id="logo-img-link" data-route="cases" title="Evidence Secure Chain"><img src="images/logo.svg" id="logo" alt="logo"></a> <a class="e-nav-link-logo" id="logo-text-link" data-route="cases" title="Evidence Secure Chain">ESC</a>
+            </div>
+            <div class="esc-nav-group" id="nav-left">
+                
+            </div>
+            <div id="nav-center">
+
+            </div>
+            <div class="esc-nav-group" id="nav-right">
+
+            </div>
+        </nav>
+    </header>
+    <main>
+    </main>
+
+    <div class="modal" id="esc-loading-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+                <div class="spinner-border spinner-border" style="width: 3rem; height: 3rem;" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow spinner-grow" style="width: 3rem; height: 3rem;" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <button id="esc-loading-close" class="visually-hidden" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal" id="esc-msg-modal" tabindex="-1" aria-labelledby="modal-upload-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content">
+
+            <div class="modal-header text-center">
+                <h5 class="modal-title w-100" id="modal-upload-title">
+                    <span class="esc-msg-title esc-msg-default">
+                        <i class="fa fa-check-circle-o fa-2X" aria-hidden="true"></i> ESC
+                    </span>
+                    <span class="esc-msg-title esc-msg-warning">
+                        <i class="fa fa-exclamation-triangle fa-2x" aria-hidden="true"></i> Warning
+                    </span>
+                    <span class="esc-msg-title esc-msg-error">
+                        <i class="fa fa-exclamation-triangle fa-2x" aria-hidden="true"></i> Error
+                    </span>
+                    <span class="esc-msg-title esc-msg-confirm">
+                        <i class="fa fa-exclamation-triangle fa-2x" aria-hidden="true"></i> Confirmation Needed
+                    </span>
+                </h5>
+            </div>
+            <div class="modal-body">
+                <div id="esc-msg-text"> 
+                    
+                </div>
+            </div>
+            <div class="modal-footer text-center">
+                <div class="w-100">
+                    <button type="button" class="btn btn-outline-light esc-button esc-msg-btn esc-msg-btn-default esc-msg-btn-warning esc-msg-btn-error" id="esc-msg-close-btn" data-bs-dismiss="modal">
+                        Close <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-light esc-button esc-msg-btn esc-msg-btn-confirm" id="esc-msg-confirm-btn" data-bs-dismiss="modal">
+                        OK <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-light esc-button esc-msg-btn esc-msg-btn-confirm" id="esc-msg-cancel-btn" data-bs-dismiss="modal">
+                        Cancel <i class="fa fa-ban" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+     <!-- Upload Modal -->
+     <div class="modal" id="upload-modal" tabindex="-1" aria-labelledby="modal-upload-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content">
+
+            <div class="modal-header text-center">
+                <h5 class="modal-title w-100" id="modal-upload-title">
+                        Sending File. Please Wait...
+                </h5>
+            </div>
+            <div class="modal-body">
+                <div class="progress" style="height: 20px;">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="uploadProgress" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                        <!-- escrever o percentual via javascript nessa área -->
+                        0 %
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer text-center">
+                <div class="w-100">
+                    <button type="button" class="btn btn-outline-light esc-button" id="cancel-btn">
+                        Cancel <i class="fa fa-ban" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-light esc-button" id="done-btn">
+                        Done <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>

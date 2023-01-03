@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ESC - Evicence Safe Chain</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/filepond/dist/filepond.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/filepond/dist/filepond.js"></script>
+ 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const filepont = FilePond.create(document.querySelector('input[type="file"]'));
+            filepont.labelIdle = 'Drag & Drop file or <span class="filepond--label-action">Browse</span>';
+            /*
+{
+  labelIdle: `
+    <div class="ecs-filepont-labelidle">
+    	<div style="margin:auto;">
+        Drag &amp; Drop your file or <span class="filepond--label-action" tabindex="0">Browse</span>
+        </div>
+    </div>
+  `,
+  beforeAddFile (e) {
+  	
+  }
+});
+            */
+
+            const uploadModal = new bootstrap.Modal('#upload-modal', {
+                backdrop: 'static',
+                keyboard: false
+        
+            });
+
+            const progressBar = document.querySelector('[role="progressbar"]');
+            progressBar.style.width = "0%";
+
+            let currentInterval = null;
+
+            document.querySelector("#upload-button").addEventListener("click", function (event) {
+                uploadModal.show();
+                document.querySelector("#concluido-btn").style.display = "none";
+                document.querySelector("#cancel-btn").style.display = "inline-block";
+
+                let progress = 0;
+                progressBar.style.width = "0%";
+
+                currentInterval = setInterval(() => {
+                    console.log("interval");
+                    if(progress == 100) {
+                        clearInterval(currentInterval);
+                        document.querySelector("#concluido-btn").style.display = "inline-block";
+                        document.querySelector("#cancel-btn").style.display = "none";
+                        return;
+                    }
+                    progress += 10;
+                    progressBar.style.width = `${progress}%`;
+                    progressBar.innerHTML = `${progress} %`;
+                }, 1000);
+            });
+
+            document.querySelector("#cancel-btn").addEventListener("click", function (event) {
+                if(currentInterval != null) {
+                    clearInterval(currentInterval);
+                }
+                uploadModal.hide();
+            });
+            document.querySelector("#concluido-btn").addEventListener("click", function (event) {
+                uploadModal.hide();
+            });
+            
+
+            document.querySelector("#submit-type").addEventListener("change", function() {
+                console.log(this.value);
+                
+                const uploadForm = document.querySelector("#upload-form");
+                const urlForm = document.querySelector("#url-form");
+
+                if(this.value == 1) {
+                    uploadForm.style.display = "block";
+                    urlForm.style.display = "none";
+                } else if (this.value == 2) {
+                    uploadForm.style.display = "none";
+                    urlForm.style.display = "block";
+                } 
+            });
+
+            const formCollapse = new bootstrap.Collapse(document.querySelector("#send-form-collapsable"), {toggle: false});
+            const tableCollapse = new bootstrap.Collapse(document.querySelector("#evid-table-collapsable"), {toggle: true});
+            
+            document.querySelector("#expand-form-btn").addEventListener("click", function () {
+                const fa = this.querySelector("i");
+
+                this.classList.toggle("expanded");
+
+                fa.classList.toggle("fa-chevron-down");
+                fa.classList.toggle("fa-chevron-up");
+
+                formCollapse.toggle();
+                tableCollapse.toggle();
+            });
+
+            const logsTab = new bootstrap.Tab('#logs-tab');
+            
+            let selectedEvidenceFile = 0;
+            document.querySelectorAll(".dropdown-item").forEach((dropdownItem) => {
+                dropdownItem.classList.remove("active");
+            })
+
+            document.querySelectorAll(".esc-list-btn").forEach((btn) => {
+                btn.addEventListener("click", function(event) {
+                    logsTab.show();
+
+                    document.querySelectorAll(".dropdown-item").forEach((dropdownItem) => {
+                        dropdownItem.classList.remove("active");
+                    })
+                    selectedEvidenceFile = this.dataset.file;
+                    console.log("Display only logs from evidence file: " + selectedEvidenceFile);
+
+                    const searchString = `.dropdown-item[data-file="${this.dataset.file}"]`;
+
+                    const dropDownBtn = document.querySelector(searchString);
+                    // console.log(searchString);
+                    // console.log('Gonna click');
+                    // console.log(dropDownBtn);
+                    // dropDownBtn.click();
+                    // console.log("clicked");
+
+                    dropDownBtn.classList.add("active");
+
+                    document.querySelector("#select-evidence-btn").textContent = dropDownBtn.textContent;
+
+                    
+                });
+            })
+            
+        });
+
+
+
+
+        
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="esc-nav-group" id="nav-logo">
+                <a class="e-nav-link" id="logo-link" href="/" title="Evidence Secure Chain"><img src="images/logo.svg" id="logo" alt="logo"></a> <a class="e-nav-link-logo" href="/" title="Evidence Secure Chain">ESC</a>
+            </div>
+            <div class="esc-nav-group" id="nav-left">
+                <a class="e-nav-link" href="cases.html">Cases</a>
+                <a class="e-nav-link">Access Control</a>
+            </div>
+            <div id="nav-center">
+
+            </div>
+            <div class="esc-nav-group" id="nav-right">
+                <a class="e-nav-link" href="register.html">Register</a>
+                <a class="e-nav-link" href="login.html">Login</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="esc-container">
+            <div id="esc-page-title">
+
+                <img src="images/scale.svg" id="esc-title-icon" alt="Security Icon">
+
+                <div id="esc-title-text">
+                    <h2>Case 002 - Golden Eye</h2>
+                </div>
+            </div>
+            <div class="esc-section">
+                <ul class="nav nav-tabs esc-nav-tabs" id="casosTab" role="tablist">
+                    <!-- style="border-color: darkgrey;" -->
+                    <li class="nav-item esc-nav-item" role="presentation">
+                        <button class="nav-link esc-nav-link active" id="proc-tab" data-bs-target="#proc-tab-pane"
+                            data-bs-toggle="tab" type="button" role="tab" aria-controls="proc-tab-pane" aria-selected="true">
+                            Procedure <i class="fa fa-balance-scale" aria-hidden="true"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item esc-nav-item" role="presentation">
+                        <button class="nav-link esc-nav-link" id="evid-tab" data-bs-target="#evid-tab-pane"
+                            data-bs-toggle="tab" type="button" role="tab" aria-controls="evid-tab-pane" aria-selected="false">
+                            Evidences <i class="fa fa-book" aria-hidden="true"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item  esc-nav-item" role="presentation">
+                        <li class="nav-item esc-nav-item" role="presentation">
+                            <button class="nav-link esc-nav-link" id="logs-tab" data-bs-target="#logs-tab-pane"
+                                data-bs-toggle="tab" type="button" role="tab" aria-controls="logs-tab-pane" aria-selected="false">
+                                Logs / Chain of Custody <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                            </button>
+                        </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="proc-tab-pane" role="tabpanel" aria-labelledby="proc-tab" tabindex="0">
+                        <div class="esc-form-container caseproc-form-container">
+                            <form action="/myfutureAWSApp/contact" METHOD="POST" id="proc-form">
+                                <input type="hidden" name="csrfmiddlewaretoken" value="Eh2nOggi3LGwZQIuQKk0HYNMzTIcAQsiPndJo2eZHiUyapQKPFD0VH58RE9VIPBm">
+
+                                <div class="esc-table">
+                                    <!-- header -->
+                                    <div class="ecs-tr-casoprocform">
+                                        <div class="ecs-th"><span class="ecs-tcontend">
+                                                <label for="name">Name:</label>
+                                        </span></div>
+                                        <div class="ecs-th"><span class="ecs-tcontend">
+                                                <input autocomplete="off" autofocus class="form-control esc-input reset-on-change" id="name" minlength="5" name="name" 
+                                                placeholder="Name for the Crinminal Case / Operation" type="text">
+                                        </span></div>
+                                    </div>
+                                    <div class="ecs-tr-casoprocform">
+                                        <div class="ecs-th"><span class="ecs-tcontend">
+                                                <label for="procnum">Process/Procedure Number:</label>
+                                        </span></div>
+                                        <div class="ecs-th"><span class="ecs-tcontend">
+                                                <input autocomplete="off" class="form-control esc-input reset-on-change" id="procnum" minlength="5" name="procnum" 
+                                                placeholder="Indentifying Number in Court or Police Department" type="text">
+                                        </span></div>
+                                    </div>
+                                    <div class="ecs-tr-casoprocform">
+                                        <div class="ecs-th"><span class="ecs-tcontend">
+                                                <label for="creationDate">Creation:</label>
+                                        </span></div>
+                                        <div class="ecs-th"><span class="ecs-tcontend" id="creationDate">
+                                                Created by user John Doe on 2022-12-23 13:34:56
+                                        </span></div>
+                                    </div>
+                                    <div class="ecs-tr-casoprocform">
+                                        <div class="ecs-th"><span class="ecs-tcontend">
+                                                
+                                        </span></div>
+                                        <div class="ecs-th"><span class="ecs-tcontend">
+                                            <button class="btn btn-outline-light px-5 esc-button" type="submit">
+                                                Save <i class="fa fa-check" aria-hidden="true"></i>
+                                            </button>
+                                        </span></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="evid-tab-pane" role="tabpanel" aria-labelledby="evid-tab" tabindex="0">
+                        <div id="expand-form-btn-container">
+                            <button type="button" class="btn btn-outline-light" id="expand-form-btn"> 
+                            <!-- data-bs-toggle="collapse" data-bs-target="#send-form-collapsable" aria-expanded="false" aria-controls="send-form-collapsable"> -->
+                                Send Evidence File
+                                <i class="fa fa-chevron-up"></i>
+                            </button>
+                        </div>
+                        <div class="collapse hide" id="send-form-collapsable">
+                            <div class="esc-form-container caseproc-form-container">
+                                <form action="/myfutureAWSApp/contact" METHOD="POST" id="contact-form">
+                                    <input type="hidden" name="csrfmiddlewaretoken" value="Eh2nOggi3LGwZQIuQKk0HYNMzTIcAQsiPndJo2eZHiUyapQKPFD0VH58RE9VIPBm">
+    
+                                    <div class="esc-table" id="caseproc-table">
+                                        <!-- header -->
+                                        <div class="ecs-tr-casoprocform">
+                                            <div class="ecs-th"><span class="ecs-tcontend">
+                                                    <label for="name">Type of Operation:</label>
+                                            </span></div>
+                                            <div class="ecs-th"><span class="ecs-tcontend">
+                                                <select class="form-select" aria-label="Type of File Submission" id="submit-type" required>
+                                                    <option disabled="" selected="">Select</option>
+                                                    <option value="1">I want to upload the file directly.</option>
+                                                    <option value="2">I want to provide a download URL and access code for the file.</option>
+                                                  </select>
+                                            </span></div>
+                                         </div>
+                                        
+                                         <div id="upload-form">
+                                            <div class="ecs-tr-filepond">
+                                                <div class="ecs-th"><span class="ecs-tcontend">
+                                                        <label for="name">File to Upload:</label>
+                                                </span></div>
+                                                <div class="ecs-td"><span class="ecs-tcontend">
+                                              
+                                                    <div id="file-container">
+                                                        <form>
+                                                            <input type="file" 
+                                                            class="filepond"
+                                                            name="filepond"
+                                                            accept=".zip"
+                                                            required
+                                                            />
+                                                        </form>
+                                                    </div>
+                                    
+                                                </span></div>
+                                            </div>
+                                    
+                                            <div class="ecs-tr-casoprocform" id="textarea-hash-row">
+                                                <div class="ecs-th"><span class="ecs-tcontend ecs-textarea-label">
+                                                    <label for="name">Hash of the file:</label>
+                                                </span></div>
+                                                <div class="ecs-th"><span class="ecs-tcontend">
+                                                    <textarea class="form-control" name="hash" required>
+                                                    </textarea>
+                                                </span></div>
+                                            </div>
+                                             <div class="ecs-tr-casoprocform esc-table-footer">
+                                                <div class="ecs-th"><span class="ecs-tcontend">
+                                                        
+                                                </span></div>
+                                                <div class="ecs-th"><span class="ecs-tcontend">
+                                                    <button class="btn btn-outline-light px-5 esc-button" type="submit" id="upload-button">
+                                                        Save and Upload <i class="fa fa-upload" aria-hidden="true"></i>
+                                                    </button>
+                                                </span></div>
+                                             </div>
+                                        </div>
+
+                                        <div id="url-form">
+                                            <div class="ecs-tr-casoprocform">
+                                                <div class="ecs-th"><span class="ecs-tcontend">
+                                                        <label for="name">URL for file download:</label>
+                                                </span></div>
+                                                <div class="ecs-th"><span class="ecs-tcontend">
+                                                    <input autofocus class="form-control esc-input reset-on-change" type="url" name="url" id="url"
+                                                    placeholder="https://example.com"
+                                                    pattern="https://.*"
+                                                    required>
+                                                </span></div>
+                                            </div>
+                                            <div class="ecs-tr-casoprocform" id="textarea-hash-row">
+                                                <div class="ecs-th"><span class="ecs-tcontend ecs-textarea-label">
+                                                    <label for="name">API Access Key:</label>
+                                                </span></div>
+                                                <div class="ecs-th"><span class="ecs-tcontend">
+                                                    <textarea class="form-control" name="hash" required>
+                                                    </textarea>
+                                                </span></div>
+                                            </div>
+                                    
+                                            <div class="ecs-tr-casoprocform" id="textarea-hash-row">
+                                                <div class="ecs-th"><span class="ecs-tcontend ecs-textarea-label">
+                                                    <label for="name">Hash of the file:</label>
+                                                </span></div>
+                                                <div class="ecs-th"><span class="ecs-tcontend">
+                                                    <textarea class="form-control" name="hash" required>
+                                                    </textarea>
+                                                </span></div>
+                                            </div>
+                                             <div class="ecs-tr-casoprocform esc-table-footer">
+                                                <div class="ecs-th"><span class="ecs-tcontend">
+                                                        
+                                                </span></div>
+                                                <div class="ecs-th"><span class="ecs-tcontend">
+                                                    <button class="btn btn-outline-light px-5 esc-button" type="submit" id="upload-button">
+                                                        Save <i class="fa fa-check" aria-hidden="true"></i>
+                                                    </button>
+                                                </span></div>
+                                             </div>
+                                        </div>
+                                         
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="collapse hide" id="evid-table-collapsable">
+                            <div class="esc-table" id="cases-table">
+                                <!-- header -->
+                                <div class="ecs-tr-evidences">
+                                    <div class="ecs-th"><span class="ecs-tcontend">File Name</span></div>
+                                    <div class="ecs-th"><span class="ecs-tcontend">Size</span></div>
+                                    <div class="ecs-th"><span class="ecs-tcontend">Status</span></div>
+                                    <div class="ecs-th"><span class="ecs-tcontend ecs-tactions">#</span></div>
+                                </div>
+                                <!-- body -->
+            
+                                <div class="ecs-tr ecs-tr-evidences">
+                                    <div class="ecs-td"><span class="ecs-tcontend">MailBoxJohnDoe.zip</span></div>
+                                    <div class="ecs-td"><span class="ecs-tcontend">2GB</span></div>
+                                    <div class="ecs-td"><span class="ecs-tcontend">Downloading...30%  
+                                        <div class="spinner-border spinner-border-sm" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                          </div>
+                                          <div class="spinner-grow spinner-grow-sm" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                          </div>
+
+                                    </span></div>
+                                    <div class="ecs-td"><span class="ecs-tcontend ecs-tactions"><a class="esc-list-btn" title="Browse File History" data-file="1"><i class="fa fa-arrows-alt" aria-hidden="true"></i></a></span></div>
+                                </div>
+            
+                                <div class="ecs-tr ecs-tr-evidences">
+                                    <div class="ecs-td"><span class="ecs-tcontend">MailBoxSuzieQ.zip</span></div>
+                                    <div class="ecs-td"><span class="ecs-tcontend">500MB</span></div>
+                                    <div class="ecs-td"><span class="ecs-tcontend">Upload Received</span></div>
+                                    <div class="ecs-td"><span class="ecs-tcontend ecs-tactions"><a class="esc-list-btn" title="Browse File History" data-file="2"><i class="fa fa-arrows-alt" aria-hidden="true"></i></a></span></div>
+                                </div>
+
+                                <div class="ecs-tr ecs-tr-evidences">
+                                    <div class="ecs-td"><span class="ecs-tcontend">CloudDocsJoker.zip</span></div>
+                                    <div class="ecs-td"><span class="ecs-tcontend">1.5GB</span></div>
+                                    <div class="ecs-td"><span class="ecs-tcontend">Hash Check Failed</span></div>
+                                    <div class="ecs-td"><span class="ecs-tcontend ecs-tactions"><a class="esc-list-btn" title="Browse File History" data-file="3"><i class="fa fa-arrows-alt" aria-hidden="true"></i></a></span></div>
+                                </div>
+
+            
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="logs-tab-pane" role="tabpanel" aria-labelledby="logs-tab" tabindex="0">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                            id="select-evidence-btn">
+                              All Case Evidences / Files
+                            </button>
+                            <ul class="dropdown-menu" id="evid-dropdown">
+                            <li><a class="dropdown-item active" data-file="0">All Case Evidences / Files</a></li>
+                              <li><a class="dropdown-item" data-file="1">MailBoxJohnDoe.zip</a></li>
+                              <li><a class="dropdown-item active" data-file="2">MailBoxSuzieQ.zip</a></li>
+                              <li><a class="dropdown-item" data-file="3">CloudDocsJoker.zip</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="esc-table" id="hist-table">
+                            <!-- header -->
+                            <div class="ecs-tr-logs">
+                                <div class="ecs-th"><span class="ecs-tcontend">File Name</span></div>
+                                <div class="ecs-th"><span class="ecs-tcontend">Operation</span></div>
+                                <div class="ecs-th"><span class="ecs-tcontend">Date/Time</span></div>
+                                <div class="ecs-th"><span class="ecs-tcontend ecs-tactions">User</span></div>
+                            </div>
+                            <!-- body -->
+        
+                            <div class="ecs-tr ecs-tr-logs">
+                                <div class="ecs-td"><span class="ecs-tcontend">MailBoxJohnDoe.zip</span></div>
+                                <div class="ecs-td"><span class="ecs-tcontend">Registered for Download</span></div>
+                                <div class="ecs-td"><span class="ecs-tcontend">2022-12-22 01:38:00
+                                </span></div>
+                                <div class="ecs-td"><span class="ecs-tcontend ecs-tactions">John Rambo</span></div>
+                            </div>
+        
+                            <div class="ecs-tr ecs-tr-logs">
+                                <div class="ecs-td"><span class="ecs-tcontend">MailBoxJohnDoe.zip</span></div>
+                                <div class="ecs-td"><span class="ecs-tcontend">Downloaded into Database and Checked</span></div>
+                                <div class="ecs-td"><span class="ecs-tcontend">2022-12-22 01:38:00
+                                </span></div>
+                                <div class="ecs-td"><span class="ecs-tcontend ecs-tactions">SYSTEM</span></div>
+                            </div>
+
+                            <div class="ecs-tr ecs-tr-logs">
+                                <div class="ecs-td"><span class="ecs-tcontend">MailBoxJohnDoe.zip</span></div>
+                                <div class="ecs-td"><span class="ecs-tcontend">Downloaded by User</span></div>
+                                <div class="ecs-td"><span class="ecs-tcontend">2022-12-22 01:38:00
+                                </span></div>
+                                <div class="ecs-td"><span class="ecs-tcontend ecs-tactions">Sherlock Holmes (Gov Officer)</span></div>
+                            </div>
+
+
+                            <div class="ecs-tr ecs-tr-logs">
+                                <div class="ecs-td"><span class="ecs-tcontend">MailBoxJohnDoe.zip</span></div>
+                                <div class="ecs-td"><span class="ecs-tcontend">Downloaded by User</span></div>
+                                <div class="ecs-td"><span class="ecs-tcontend">2022-12-22 01:38:00
+                                </span></div>
+                                <div class="ecs-td"><span class="ecs-tcontend ecs-tactions">Tow Matter (Lawyer)</span></div>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+
+    
+
+    <div class="modal fade" id="upload-modal" tabindex="-1" aria-labelledby="modal-upload-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content">
+
+            <div class="modal-header text-center">
+                <h5 class="modal-title w-100" id="modal-upload-title">
+                        Sending File. Please Wait...
+                </h5>
+            </div>
+            <div class="modal-body">
+                <div class="progress" style="height: 20px;">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="uploadProgress" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                        <!-- escrever o percentual via javascript nessa área -->
+                        0 %
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer text-center">
+                <div class="w-100">
+                    <button type="button" class="btn btn-outline-light esc-button" id="cancel-btn">
+                        Cancelar <i class="fa fa-ban" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-light esc-button" id="concluido-btn">
+                        Concluído <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    
+
+</body>
+
+</html>

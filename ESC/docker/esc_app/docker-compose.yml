@@ -1,0 +1,27 @@
+version: '3'
+services:
+  dbserver.esc:
+    build:
+      context: ./esc_db
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./esc_db/data:/var/lib/postgresql/data
+    env_file:
+      - ./esc_db/env.db
+  dbadmin:
+   image: adminer
+   depends_on:
+     - dbserver.esc
+   restart: always
+   ports:
+     - target: 8080
+       published: 8081
+       protocol: tcp
+       mode: host
+
+
+
+
+      
+  

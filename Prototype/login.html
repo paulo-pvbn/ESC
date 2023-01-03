@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>ESC - Evicence Safe Chain</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="esc-nav-group" id="nav-logo">
+                <a class="e-nav-link" id="logo-link" href="/" title="Evidence Secure Chain"><img src="images/logo.svg" id="logo" alt="logo"></a> <a class="e-nav-link-logo" href="/" title="Evidence Secure Chain">ESC</a>
+            </div>
+            <div class="esc-nav-group" id="nav-left">
+                <a class="e-nav-link" href="cases.html">Cases</a>
+                <a class="e-nav-link">Access Control</a>
+            </div>
+            <div id="nav-center">
+
+            </div>
+            <div class="esc-nav-group" id="nav-right">
+                <a class="e-nav-link" href="register.html">Register</a>
+                <a class="e-nav-link" href="login.html">Login</a>
+            </div>
+        </nav>
+    </header>
+    <main class="jumbotron">
+        <div class="esc-fullscreen-container">
+
+            <div id="login-section">
+                <div id="login-form-container" class="esc-form-container">
+                    <div id="form-header">
+                        <div id="login-form-title">
+                            <img src="images/security.svg" id="esc-login-icon" alt="Security Icon"> <span id="login-title">Login</span>
+                        </div>
+                    </div>
+                    <div id="form-body">
+                        <form class="form" action="/myfutureAWSApp/contact" METHOD="POST" id="login-form">
+                            <input type="hidden" name="csrfmiddlewaretoken" value="Eh2nOggi3LGwZQIuQKk0HYNMzTIcAQsiPndJo2eZHiUyapQKPFD0VH58RE9VIPBm">
+
+                            <table id="login-form-table">
+                                <tr>
+                                    <th><label for="name">Username:</label></th>
+                                    <td><input autocomplete="username" autofocus class="form-control esc-input reset-on-change" id="username" minlength="5" name="username" placeholder="Username" type="text"></td>
+                                </tr>
+
+                                <tr>
+                                    <th><label for="name">Password:</label></th>
+                                    <td><input autocomplete="current-password" class="form-control esc-input reset-on-change" id="password" minlength="5" name="password" placeholder="Password" type="password"></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-outline-light px-5" type="submit">
+                                        Enter <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                    </button>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

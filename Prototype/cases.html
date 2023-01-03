@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>ESC - Evicence Safe Chain</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="esc-nav-group" id="nav-logo">
+                <a class="e-nav-link" id="logo-link" href="/" title="Evidence Secure Chain"><img src="images/logo.svg" id="logo" alt="logo"></a> <a class="e-nav-link-logo" href="/" title="Evidence Secure Chain">ESC</a>
+            </div>
+            <div class="esc-nav-group" id="nav-left">
+                <a class="e-nav-link" href="cases.html">Cases</a>
+                <a class="e-nav-link">Access Control</a>
+            </div>
+            <div id="nav-center">
+
+            </div>
+            <div class="esc-nav-group" id="nav-right">
+                <a class="e-nav-link" href="register.html">Register</a>
+                <a class="e-nav-link" href="login.html">Login</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="esc-container">
+            <div id="esc-page-title">
+
+                <img src="images/scale.svg" id="esc-title-icon" alt="Security Icon">
+
+                <div id="esc-title-text">
+                    <h2>Cases</h2>
+                </div>
+                <div class="esc-button-container">
+                    <button class="btn btn-outline-dark esc-button">New Case <i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="esc-section">
+                <div class="esc-table" id="cases-table">
+                    <!-- header -->
+                    <div class="ecs-tr-cases">
+                        <div class="ecs-th"><span class="ecs-tcontend">Code</span></div>
+                        <div class="ecs-th"><span class="ecs-tcontend">Name</span></div>
+                        <div class="ecs-th"><span class="ecs-tcontend">Status</span></div>
+                        <div class="ecs-th"><span class="ecs-tcontend ecs-tactions">#</span></div>
+                    </div>
+                    <!-- body -->
+
+                    <div class="ecs-tr ecs-tr-cases">
+                        <div class="ecs-td"><span class="ecs-tcontend">001</span></div>
+                        <div class="ecs-td"><span class="ecs-tcontend">Mission Impossible</span></div>
+                        <div class="ecs-td"><span class="ecs-tcontend">Awaiting Files</span></div>
+                        <div class="ecs-td"><span class="ecs-tcontend ecs-tactions"><a class="esc-list-btn" href="case_details_proc.html" title="Browse Case Files"><i class="fa fa-book" aria-hidden="true"></i></a></span></div>
+                    </div>
+
+                    <div class="ecs-tr ecs-tr-cases">
+                        <div class="ecs-td"><span class="ecs-tcontend">002</span></div>
+                        <div class="ecs-td"><span class="ecs-tcontend">Golden Eye</span></div>
+                        <div class="ecs-td"><span class="ecs-tcontend">Files Received</span></div>
+                        <div class="ecs-td"><span class="ecs-tcontend ecs-tactions"><a class="esc-list-btn" href="case_details_proc.html" title="Browse Case Files"><i class="fa fa-book" aria-hidden="true"></i></a></span></div>
+                    </div>
+
+                    <div class="ecs-tr ecs-tr-cases">
+                        <div class="ecs-td"><span class="ecs-tcontend">003</span></div>
+                        <div class="ecs-td"><span class="ecs-tcontend">Harpia</span></div>
+                        <div class="ecs-td"><span class="ecs-tcontend">Files Received</span></div>
+                        <div class="ecs-td"><span class="ecs-tcontend ecs-tactions"><a class="esc-list-btn" href="case_details_proc.html" title="Browse Case Files"><i class="fa fa-book" aria-hidden="true"></i></a></span></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

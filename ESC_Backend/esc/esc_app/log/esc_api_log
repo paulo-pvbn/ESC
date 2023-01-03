@@ -1,0 +1,1300 @@
+2022-12-28 07:17:15,777 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-28 07:17:38,042 WARNING log_response(224) Not Found: /favicon.ico
+2022-12-28 07:24:48,157 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\serializers.py changed, reloading.
+2022-12-28 07:24:50,451 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-28 07:24:57,838 ERROR log_response(224) Internal Server Error: /esc/api/cases/1
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 43, in get
+    return Response(serializer.data)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\serializers.py", line 548, in data
+    ret = super().data
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\serializers.py", line 515, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\serializers.py", line 663, in to_representation
+    return [
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\serializers.py", line 664, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\serializers.py", line 515, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\fields.py", line 1882, in to_representation
+    return method(value)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\serializers.py", line 21, in get_filesize_mb
+    return f"{round(self.filesize / 1048576, 2)}MB"
+AttributeError: 'EvidenceFileSerializer' object has no attribute 'filesize'
+2022-12-28 07:26:05,424 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\serializers.py changed, reloading.
+2022-12-28 07:26:08,024 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-28 07:26:46,039 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\serializers.py changed, reloading.
+2022-12-28 07:26:48,600 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-28 07:27:09,319 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\serializers.py changed, reloading.
+2022-12-28 07:27:11,889 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-28 07:28:23,886 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\models.py changed, reloading.
+2022-12-28 07:28:26,246 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-28 08:33:41,980 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-28 08:34:11,168 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\admin.py changed, reloading.
+2022-12-28 08:34:13,551 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-28 08:34:32,009 ERROR log_response(224) Internal Server Error: /esc/api/cases/1
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 43, in get
+    return Response(serializer.data)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\serializers.py", line 548, in data
+    ret = super().data
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\serializers.py", line 515, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\serializers.py", line 663, in to_representation
+    return [
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\serializers.py", line 664, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\serializers.py", line 515, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\serializers.py", line 15, in to_representation
+    'username': value.username,
+AttributeError: 'AppUser' object has no attribute 'username'
+2022-12-28 08:35:34,267 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\models.py changed, reloading.
+2022-12-28 08:37:46,900 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-28 08:39:18,268 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-28 11:48:54,920 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-28 11:49:04,311 WARNING log_response(224) Not Found: /favicon.ico
+2022-12-28 12:09:18,886 WARNING log_response(224) Not Found: /favicon.ico
+2022-12-28 12:57:24,059 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-28 12:57:26,891 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-28 13:00:25,311 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-28 13:00:38,040 ERROR log_response(224) Internal Server Error: /esc/api/evidences/1
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 332, in check_permissions
+    if not permission.has_permission(request, self):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\permissions.py", line 229, in has_permission
+    queryset = self._queryset(view)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\permissions.py", line 205, in _queryset
+    assert hasattr(view, 'get_queryset') \
+AssertionError: Cannot apply DjangoModelPermissionsOrAnonReadOnly on a view that does not set `.queryset` or have a `.get_queryset()` method.
+2022-12-28 13:01:05,605 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-28 13:01:08,039 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-28 13:03:00,838 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-28 13:03:03,260 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-28 13:03:15,020 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-28 13:03:17,377 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-28 13:03:22,699 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-28 13:03:25,221 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-28 13:03:38,808 ERROR log_response(224) Internal Server Error: /esc/api/evidences/1
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\fields\__init__.py", line 1823, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ','
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 59, in get
+    pendingEvidences = EvidenceFile.objects.filter(id__in=ids)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\sql\query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\sql\query.py", line 1412, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\sql\query.py", line 1347, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\sql\query.py", line 1193, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\lookups.py", line 240, in get_prep_lookup
+    rhs_value = self.lhs.output_field.get_prep_value(rhs_value)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\fields\__init__.py", line 1825, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got ','.
+2022-12-28 13:04:11,459 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-28 13:04:13,899 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-28 13:04:16,544 ERROR log_response(224) Internal Server Error: /esc/api/evidences/1
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\fields\__init__.py", line 1823, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ','
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 60, in get
+    pendingEvidences = EvidenceFile.objects.filter(id__in=ids)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\sql\query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\sql\query.py", line 1412, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\sql\query.py", line 1347, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\sql\query.py", line 1193, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\lookups.py", line 240, in get_prep_lookup
+    rhs_value = self.lhs.output_field.get_prep_value(rhs_value)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\fields\__init__.py", line 1825, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got ','.
+2022-12-28 13:04:37,946 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-28 13:04:40,308 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-28 13:04:46,695 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-28 13:04:49,351 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-28 13:05:13,132 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-28 13:05:15,613 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-28 13:05:37,521 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-28 13:05:39,959 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-28 13:24:25,363 WARNING log_response(224) Not Found: /esc/api/evideces
+2022-12-28 13:27:15,881 WARNING log_response(224) Not Found: /esc/api/evidences
+2022-12-28 13:30:34,359 ERROR log_response(224) Internal Server Error: /esc/api/evidences/1
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 63, in get
+    serializer = EvidenceFileSerializer(filteredEvidences, many=True)
+NameError: name 'pendingEvidences' is not defined
+2022-12-28 13:30:57,551 ERROR log_response(224) Internal Server Error: /esc/api/evidences/1
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 63, in get
+    serializer = EvidenceFileSerializer(filteredEvidences, many=True)
+NameError: name 'pendingEvidences' is not defined
+2022-12-28 13:31:38,558 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-28 13:31:41,201 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-28 13:41:40,930 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-28 13:41:43,363 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 00:55:23,173 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 00:59:33,508 WARNING log_response(224) Not Found: /favicon.ico
+2022-12-30 01:40:35,241 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 01:40:37,857 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 01:41:02,629 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 01:41:05,240 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 02:07:12,866 WARNING log_response(224) Forbidden: /esc/api/cases/
+2022-12-30 02:09:06,548 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc\settings.py changed, reloading.
+2022-12-30 02:09:09,110 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 02:09:25,436 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 02:10:54,881 WARNING log_response(224) Forbidden: /esc/api/cases/
+2022-12-30 02:13:23,896 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc\settings.py changed, reloading.
+2022-12-30 02:13:26,330 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 02:13:37,893 WARNING log_response(224) Forbidden: /esc/api/cases/
+2022-12-30 02:25:59,566 WARNING log_response(224) Forbidden: /esc/api/cases/
+2022-12-30 02:40:43,754 WARNING log_response(224) Not Found: /favicon.ico
+2022-12-30 02:41:18,778 WARNING log_response(224) Not Found: /favicon.ico
+2022-12-30 02:57:35,784 WARNING log_response(224) Not Found: /favicon.ico
+2022-12-30 02:57:39,833 WARNING log_response(224) Unauthorized: /esc/api/cases/
+2022-12-30 02:58:03,496 WARNING log_response(224) Unauthorized: /esc/api/cases/
+2022-12-30 02:58:21,015 WARNING log_response(224) Not Found: /favicon.ico
+2022-12-30 02:58:29,055 WARNING log_response(224) Unauthorized: /esc/api/cases/
+2022-12-30 03:07:02,148 WARNING log_response(224) Unauthorized: /esc/api/cases/
+2022-12-30 03:07:11,352 WARNING log_response(224) Not Found: /favicon.ico
+2022-12-30 03:07:30,134 WARNING log_response(224) Unauthorized: /esc/api/cases/
+2022-12-30 03:08:32,512 WARNING log_response(224) Not Found: /favicon.ico
+2022-12-30 03:08:43,402 WARNING log_response(224) Unauthorized: /esc/api/cases/
+2022-12-30 03:09:38,043 WARNING log_response(224) Not Found: /favicon.ico
+2022-12-30 03:09:50,876 WARNING log_response(224) Unauthorized: /esc/api/cases/
+2022-12-30 03:10:56,693 WARNING log_response(224) Not Found: /favicon.ico
+2022-12-30 03:11:09,940 WARNING log_response(224) Unauthorized: /esc/api/cases/
+2022-12-30 03:19:08,280 WARNING log_response(224) Not Found: /favicon.ico
+2022-12-30 03:23:26,729 ERROR log_response(224) Internal Server Error: /esc/api/cases/
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\utils\datastructures.py", line 76, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 57, in post
+    errors = self.validate_case_form(request, validated_form_data, current_user)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 102, in validate_case_form
+    name = request.POST[self.NAME_FIELD]
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\utils\datastructures.py", line 78, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'name'
+2022-12-30 03:29:16,387 ERROR log_response(224) Internal Server Error: /esc/api/cases/
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\utils\datastructures.py", line 76, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 57, in post
+    errors = self.validate_case_form(request, validated_form_data, current_user)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 102, in validate_case_form
+    name = request.POST[self.NAME_FIELD]
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\utils\datastructures.py", line 78, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'name'
+2022-12-30 03:34:55,452 ERROR log_response(224) Internal Server Error: /esc/api/cases/
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\utils\datastructures.py", line 76, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 57, in post
+    errors = self.validate_case_form(request, validated_form_data, current_user)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 102, in validate_case_form
+    name = request.POST[self.NAME_FIELD]
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\utils\datastructures.py", line 78, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'name'
+2022-12-30 03:39:39,670 ERROR log_response(224) Internal Server Error: /esc/api/cases/
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\utils\datastructures.py", line 76, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 57, in post
+    errors = self.validate_case_form(request, validated_form_data, current_user)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 102, in validate_case_form
+    name = request.POST[self.NAME_FIELD]
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\utils\datastructures.py", line 78, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'name'
+2022-12-30 03:44:04,944 ERROR log_response(224) Internal Server Error: /esc/api/cases/
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\utils\datastructures.py", line 76, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 57, in post
+    errors = self.validate_case_form(request, validated_form_data, current_user)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 102, in validate_case_form
+    name = request.POST[self.NAME_FIELD]
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\utils\datastructures.py", line 78, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'name'
+2022-12-30 03:46:13,453 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 03:46:22,987 ERROR log_response(224) Internal Server Error: /esc/api/cases/
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\utils\datastructures.py", line 76, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 57, in post
+    errors = self.validate_case_form(request, validated_form_data, current_user)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 102, in validate_case_form
+    name = request.body[self.NAME_FIELD]
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\utils\datastructures.py", line 78, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'name'
+2022-12-30 03:46:27,414 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 03:46:58,813 ERROR log_response(224) Internal Server Error: /esc/api/cases/
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 57, in post
+    errors = self.validate_case_form(request, validated_form_data, current_user)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 102, in validate_case_form
+    name = request.body[self.NAME_FIELD]
+TypeError: byte indices must be integers or slices, not str
+2022-12-30 03:50:54,533 ERROR log_response(224) Internal Server Error: /esc/api/cases/
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 57, in post
+    errors = self.validate_case_form(request, validated_form_data, current_user)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 102, in validate_case_form
+    name = request.body[self.NAME_FIELD]
+TypeError: byte indices must be integers or slices, not str
+2022-12-30 03:51:13,862 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 03:51:17,740 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 03:52:18,333 ERROR log_response(224) Internal Server Error: /esc/api/cases/
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 57, in post
+    errors = self.validate_case_form(request, validated_form_data, current_user)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 106, in validate_case_form
+    procedure_number = request.data[self.PROCNUM_FIELD]
+KeyError: 'procedure_number'
+2022-12-30 03:53:25,042 ERROR log_response(224) Internal Server Error: /esc/api/cases/
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 57, in post
+    errors = self.validate_case_form(request, validated_form_data, current_user)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 117, in validate_case_form
+    existing_cases = current_user.cases.filter(id != case_id, name__iexact = name)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\sql\query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\sql\query.py", line 1412, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\sql\query.py", line 1283, in build_filter
+    arg, value = filter_expr
+TypeError: cannot unpack non-iterable bool object
+2022-12-30 03:54:20,883 ERROR log_response(224) Internal Server Error: /esc/api/cases/
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 57, in post
+    errors = self.validate_case_form(request, validated_form_data, current_user)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 117, in validate_case_form
+    existing_cases = current_user.cases.filter(id != case_id, name__iexact = name)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\sql\query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\sql\query.py", line 1412, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\sql\query.py", line 1283, in build_filter
+    arg, value = filter_expr
+TypeError: cannot unpack non-iterable bool object
+2022-12-30 03:55:04,220 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 03:55:09,002 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 04:18:36,199 ERROR log_response(224) Internal Server Error: /esc/api/cases/
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: put() missing 1 required positional argument: 'case_id'
+2022-12-30 04:19:51,726 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\urls.py changed, reloading.
+2022-12-30 04:19:56,262 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 04:20:47,484 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 04:20:51,264 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 04:21:06,268 ERROR log_response(224) Internal Server Error: /esc/api/cases/
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: put() missing 1 required positional argument: 'case_id'
+2022-12-30 04:23:14,580 ERROR log_response(224) Internal Server Error: /esc/api/cases/
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: put() missing 1 required positional argument: 'case_id'
+2022-12-30 04:24:41,182 ERROR log_response(224) Internal Server Error: /esc/api/cases/
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: put() missing 1 required positional argument: 'case_id'
+2022-12-30 04:24:54,117 ERROR log_response(224) Internal Server Error: /esc/api/cases/
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: put() missing 1 required positional argument: 'case_id'
+2022-12-30 04:29:13,714 ERROR log_response(224) Internal Server Error: /esc/api/cases/8
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 75, in put
+    errors = self.validate_case_form(request, validated_form_data, current_user)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 102, in validate_case_form
+    name = request.data[self.NAME_FIELD]
+KeyError: 'name'
+2022-12-30 04:32:12,833 ERROR log_response(224) Internal Server Error: /esc/api/cases/8
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 75, in put
+    errors = self.validate_case_form(request, validated_form_data, current_user)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 102, in validate_case_form
+    name = request.data[self.NAME_FIELD]
+KeyError: 'name'
+2022-12-30 04:38:31,265 ERROR log_response(224) Internal Server Error: /esc/api/cases/8
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 75, in put
+    errors = self.validate_case_form(request, validated_form_data, current_user)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 102, in validate_case_form
+    name = request.data[self.NAME_FIELD]
+KeyError: 'name'
+2022-12-30 04:41:28,823 WARNING log_response(224) Bad Request: /esc/api/cases/8
+2022-12-30 04:42:59,217 WARNING log_response(224) Bad Request: /esc/api/cases/8
+2022-12-30 04:48:23,552 WARNING log_response(224) Bad Request: /esc/api/cases/8
+2022-12-30 04:54:16,143 WARNING log_response(224) Bad Request: /esc/api/cases/8
+2022-12-30 04:59:53,672 WARNING log_response(224) Bad Request: /esc/api/cases/8
+2022-12-30 05:02:31,370 WARNING log_response(224) Bad Request: /esc/api/cases/8
+2022-12-30 05:07:05,445 WARNING log_response(224) Bad Request: /esc/api/cases/8
+2022-12-30 05:07:56,359 WARNING log_response(224) Bad Request: /esc/api/cases/8
+2022-12-30 05:08:33,363 WARNING log_response(224) Bad Request: /esc/api/cases/8
+2022-12-30 05:09:16,943 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 05:09:21,735 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 05:09:39,289 ERROR log_response(224) Internal Server Error: /esc/api/cases/8
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 75, in put
+    errors = self.validate_case_form(request, validated_form_data, current_user, case_id)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 118, in validate_case_form
+    existing_cases = current_user.cases.filter(id != case_id, name__iexact = name)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\sql\query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\sql\query.py", line 1412, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\sql\query.py", line 1283, in build_filter
+    arg, value = filter_expr
+TypeError: cannot unpack non-iterable bool object
+2022-12-30 05:10:02,309 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 05:10:06,170 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 05:11:04,183 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 05:11:07,284 ERROR log_response(224) Internal Server Error: /esc/api/cases/8
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 75, in put
+    #Form validadtion
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 118, in validate_case_form
+    #in case the operation is an update (put)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\sql\query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\sql\query.py", line 1412, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\sql\query.py", line 1283, in build_filter
+    arg, value = filter_expr
+TypeError: cannot unpack non-iterable bool object
+2022-12-30 05:11:10,781 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 05:16:00,153 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 05:16:10,436 ERROR log_response(224) Internal Server Error: /esc/api/cases/8
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 77, in put
+    errors = self.validate_case_form(request, validated_form_data, current_user, case_id)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 120, in validate_case_form
+    existing_cases = current_user.cases.filter(~Q(id = case_id), name__iexact = name)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\sql\query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\sql\query.py", line 1412, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\sql\query.py", line 1283, in build_filter
+    arg, value = filter_expr
+TypeError: cannot unpack non-iterable bool object
+2022-12-30 05:16:14,178 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 05:16:54,286 ERROR log_response(224) Internal Server Error: /esc/api/cases/8
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 77, in put
+    errors = self.validate_case_form(request, validated_form_data, current_user, case_id)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 120, in validate_case_form
+    existing_cases = current_user.cases.filter(~Q(id = case_id), name__iexact = name)
+NameError: name 'Q' is not defined
+2022-12-30 05:17:54,069 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 05:17:57,974 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 05:19:09,333 WARNING log_response(224) Bad Request: /esc/api/cases/7
+2022-12-30 05:20:36,392 WARNING log_response(224) Bad Request: /esc/api/cases/7
+2022-12-30 05:55:22,076 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 05:55:27,130 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 05:59:32,579 WARNING log_response(224) Unauthorized: /esc/api/evidences/1
+2022-12-30 06:04:07,822 WARNING log_response(224) Unauthorized: /esc/api/evidences/1
+2022-12-30 06:06:14,562 WARNING log_response(224) Unauthorized: /esc/api/evidences/1
+2022-12-30 06:09:50,237 WARNING log_response(224) Unauthorized: /esc/api/evidences/1
+2022-12-30 06:12:48,081 DEBUG post(176) Recevied file:birthdays.zip
+2022-12-30 06:13:25,840 INFO post(220) Failure creating evidence file at Case_1\evidences\birthdays.zip. 
+2022-12-30 06:13:25,840 INFO post(224) File had already been saved to storage and will be deleted from Case_1\evidences\birthdays.zip. 
+2022-12-30 06:13:26,502 ERROR log_response(224) Internal Server Error: /esc/api/evidences/1
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 229, in post
+    raise e
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 200, in post
+    received_file_size = os.path.getsize(file_location)
+  File "C:\Programas\Python\Python39\lib\genericpath.py", line 50, in getsize
+    return os.stat(filename).st_size
+FileNotFoundError: [WinError 3] O sistema não pode encontrar o caminho especificado: 'Case_1/evidences/birthdays.zip'
+2022-12-30 06:15:20,781 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 06:15:25,104 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 06:15:39,082 DEBUG post(176) Recevied file:birthdays.zip
+2022-12-30 06:17:02,752 INFO post(220) Failure creating evidence file at Case_1\evidences\birthdays.zip. 
+2022-12-30 06:17:02,754 INFO post(224) File had already been saved to storage and will be deleted from Case_1\evidences\birthdays.zip. 
+2022-12-30 06:17:05,511 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 06:17:09,138 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 06:17:35,147 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\helpers.py changed, reloading.
+2022-12-30 06:17:39,196 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 06:17:57,585 DEBUG post(176) Recevied file:birthdays.zip
+2022-12-30 06:18:54,934 INFO post(220) Failure creating evidence file at Case_1\evidences\birthdays.zip. 
+2022-12-30 06:18:54,936 INFO post(224) File had already been saved to storage and will be deleted from Case_1\evidences\birthdays.zip. 
+2022-12-30 06:18:56,338 ERROR log_response(224) Internal Server Error: /esc/api/evidences/1
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 229, in post
+    raise e
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 214, in post
+    EvidenceHistory.objects.create(evidence_file=evidence, operation=EvidenceHistory.Operation.UPLOADED, case=case, user=request.user.id)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\query.py", line 451, in create
+    obj = self.model(**kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\base.py", line 485, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\fields\related_descriptors.py", line 215, in __set__
+    raise ValueError(
+ValueError: Cannot assign "2": "EvidenceHistory.user" must be a "User" instance.
+2022-12-30 06:19:29,304 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 06:19:33,012 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 06:20:05,020 DEBUG post(176) Recevied file:birthdays.zip
+2022-12-30 06:20:45,058 INFO post(220) Failure creating evidence file at Case_1\evidences\birthdays.zip. 
+2022-12-30 06:20:45,059 INFO post(224) File had already been saved to storage and will be deleted from Case_1\evidences\birthdays.zip. 
+2022-12-30 06:20:45,387 ERROR log_response(224) Internal Server Error: /esc/api/evidences/1
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\utils\datastructures.py", line 76, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'ids'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 229, in post
+    raise e
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 217, in post
+    return self.get(request, case_id)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 154, in get
+    ids = request.GET["ids"]
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\utils\datastructures.py", line 78, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'ids'
+2022-12-30 06:21:11,281 DEBUG post(176) Recevied file:birthdays.zip
+2022-12-30 06:21:39,492 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 06:21:42,048 INFO post(220) Failure creating evidence file at Case_1\evidences\birthdays.zip. 
+2022-12-30 06:21:42,050 INFO post(224) File had already been saved to storage and will be deleted from Case_1\evidences\birthdays.zip. 
+2022-12-30 06:21:42,223 ERROR log_response(224) Internal Server Error: /esc/api/evidences/1
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\utils\datastructures.py", line 76, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'ids'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 229, in post
+    raise e
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 217, in post
+    return self.get(request, case_id)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 154, in get
+    ids = request.GET.get("ids")
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\utils\datastructures.py", line 78, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'ids'
+2022-12-30 06:21:46,063 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 06:21:49,875 DEBUG post(176) Recevied file:birthdays.zip
+2022-12-30 06:27:18,556 DEBUG post(176) Recevied file:birthdays.zip
+2022-12-30 06:29:40,177 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 06:29:46,801 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 06:35:16,648 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 06:35:20,421 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 06:36:20,636 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\serializers.py changed, reloading.
+2022-12-30 06:36:24,773 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 06:39:58,361 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 06:40:02,153 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 06:40:26,773 DEBUG post(176) Recevied file:birthdays.zip
+2022-12-30 06:49:47,486 DEBUG post(176) Recevied file:birthdays.zip
+2022-12-30 06:52:18,445 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 06:52:22,546 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 06:58:18,208 DEBUG post(176) Recevied file:birthdays.zip
+2022-12-30 07:01:32,118 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 07:01:36,040 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 07:02:21,362 DEBUG post(176) Recevied file:birthdays.zip
+2022-12-30 07:06:46,351 DEBUG post(176) Recevied file:birthdays.zip
+2022-12-30 07:08:48,794 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\models.py changed, reloading.
+2022-12-30 07:08:52,396 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 07:13:46,559 DEBUG post(176) Recevied file:birthdays.zip
+2022-12-30 07:18:42,624 DEBUG post(176) Recevied file:birthdays.zip
+2022-12-30 07:38:23,021 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 07:38:27,102 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 07:38:34,767 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 07:38:38,408 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 07:40:00,924 ERROR log_response(224) Internal Server Error: /esc/api/evidences/1/14
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 156, in get
+    return download_evidence_file(self, request, evidence_file)
+TypeError: download_evidence_file() missing 1 required positional argument: 'evidence_file'
+2022-12-30 07:40:38,592 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 07:40:42,999 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 07:55:09,287 DEBUG post(180) Recevied file:caso_76_dados.zip
+2022-12-30 07:58:45,391 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 07:58:49,980 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 07:59:12,043 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 07:59:16,464 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 08:01:30,399 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 08:01:34,696 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 08:11:38,707 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 08:11:47,603 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 08:11:51,355 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 08:13:57,824 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 08:14:01,983 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 08:14:29,930 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\urls.py changed, reloading.
+2022-12-30 08:14:33,904 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 08:14:46,233 ERROR log_response(224) Internal Server Error: /esc/api/history/1
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 277, in get
+    current_user =  AppUser.objects.get(user__id=request.user.id)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\query.py", line 435, in get
+    raise self.model.DoesNotExist(
+esc_app.models.AppUser.DoesNotExist: AppUser matching query does not exist.
+2022-12-30 08:15:33,999 ERROR log_response(224) Internal Server Error: /esc/api/cases/1
+Traceback (most recent call last):
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py", line 36, in get
+    current_user =  AppUser.objects.get(user__id=request.user.id)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Programas\Python\Venv\ESC\lib\site-packages\django\db\models\query.py", line 435, in get
+    raise self.model.DoesNotExist(
+esc_app.models.AppUser.DoesNotExist: AppUser matching query does not exist.
+2022-12-30 08:16:06,320 WARNING log_response(224) Unauthorized: /esc/api/cases/1
+2022-12-30 18:29:07,391 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 18:29:49,664 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 18:30:09,681 WARNING log_response(224) Not Found: /favicon.ico
+2022-12-30 18:41:50,552 DEBUG post(182) Recevied file:ng-book2-book-angular-11-r77.pdf
+2022-12-30 18:42:35,447 DEBUG post(182) Recevied file:ng-book2-book-angular-11-r77-code.zip
+2022-12-30 18:42:44,355 DEBUG post(182) Recevied file:ng-book2-book-angular-11-r77-code.zip
+2022-12-30 18:57:55,728 DEBUG post(182) Recevied file:ng-book2-book-angular-11-r77-code.zip
+2022-12-30 18:59:28,912 DEBUG post(182) Recevied file:ng-book2-book-angular-11-r77.pdf
+2022-12-30 19:03:09,724 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 19:03:12,481 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 19:11:50,813 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 19:11:53,168 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 19:12:23,335 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 19:12:25,663 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 19:15:58,679 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 19:16:01,082 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 19:16:04,228 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 19:16:06,744 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 19:35:13,960 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 19:35:16,546 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 19:37:01,867 DEBUG post(195) Recevied file:ng-book2-book-angular-11-r77-code.zip
+2022-12-30 19:39:01,093 WARNING log_response(224) Unauthorized: /api/token/
+2022-12-30 19:39:33,092 WARNING log_response(224) Unauthorized: /api/token/
+2022-12-30 19:44:18,666 WARNING log_response(224) Unauthorized: /api/token/
+2022-12-30 19:45:18,122 WARNING log_response(224) Bad Request: /esc/api/evidences/9/19
+2022-12-30 19:46:34,834 WARNING log_response(224) Bad Request: /esc/api/evidences/9/21
+2022-12-30 19:46:52,251 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 19:46:54,908 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 19:47:14,305 WARNING log_response(224) Bad Request: /esc/api/history/9
+2022-12-30 19:48:14,040 WARNING log_response(224) Bad Request: /esc/api/history/9
+2022-12-30 19:48:26,195 INFO trigger_reload(251) C:\Users\celestino.frc\Documents\cursos\CS50\ProjetoFinal\workspace\ESC_Backend\esc\esc_app\views.py changed, reloading.
+2022-12-30 19:48:28,574 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-30 19:55:23,756 WARNING log_response(224) Unauthorized: /api/token/
+2022-12-31 00:54:46,605 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-31 00:55:50,332 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2022-12-31 00:56:00,239 WARNING log_response(224) Not Found: /favicon.ico
+2022-12-31 01:04:25,251 WARNING log_response(224) Not Found: /
+2022-12-31 01:04:25,407 WARNING log_response(224) Not Found: /favicon.ico
+2022-12-31 01:18:52,044 DEBUG post(193) Recevied file:ng-book2-book-angular-11-r77-code.zip
+2022-12-31 01:19:12,026 DEBUG post(193) Recevied file:ng-book2-book-angular-11-r77.pdf
+2022-12-31 01:22:39,156 DEBUG post(193) Recevied file:ng-book2-book-angular-11-r77-code.zip
+2023-01-03 11:55:49,762 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2023-01-03 11:56:19,841 INFO run_with_reloader(637) Watching for file changes with StatReloader
+2023-01-03 11:56:34,355 WARNING log_response(224) Not Found: /
+2023-01-03 11:56:34,496 WARNING log_response(224) Not Found: /favicon.ico

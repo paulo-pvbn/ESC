@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "filepond": "^4.30.4",
+    "font-awesome": "^4.7.0"
+  }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script src="node_modules/filepond/dist/filepond.js"></script>
+        <link rel="stylesheet" href="node_modules/filepond/dist/filepond.css">
+        <link rel="stylesheet" href="styles/styles.css">
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                FilePond.create(document.querySelector('input[type="file"]'));
+            });
+        </script>
+        <style>
+            /**
+                * FilePond Custom Styles
+                */
+                .filepond--drop-label {
+                    color: black
+                }
+
+                .filepond--label-action {
+                    text-decoration-color: lightgray;
+                }
+
+                .filepond--panel-root {
+                    border-radius: 2em;
+                    background-color: darkgrey;
+                    height: 1em;
+                }
+
+                .filepond--item-panel {
+                    background-color: #595e68;
+                }
+
+                .filepond--drip-blob {
+                    background-color: #7f8a9a;
+                }
+
+                .file-container {
+                    max-width: 300px;
+                    border: 1px solid red;
+                }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="file-container">
+                <form>
+                    <input type="file" 
+                    class="filepond"
+                    name="filepond"
+                    />
+                </form>
+            </div>
+    </body>
+</html>

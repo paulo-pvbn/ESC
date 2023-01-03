@@ -1,0 +1,42 @@
+    <div class="jumbotron">
+        <div class="esc-fullscreen-container">
+
+            <div id="login-section">
+                <div id="login-form-container" class="esc-form-container">
+                    <div id="form-header">
+                        <div id="login-form-title">
+                            <img src="images/security.svg" id="esc-login-icon" alt="Security Icon"> <span id="login-title">Login</span>
+                        </div>
+                    </div>
+                    <div id="form-body">
+                        <form class="form" METHOD="POST" id="login-form">
+                            <!-- <input type="hidden" name="csrfmiddlewaretoken" value="Eh2nOggi3LGwZQIuQKk0HYNMzTIcAQsiPndJo2eZHiUyapQKPFD0VH58RE9VIPBm"> -->
+
+                            <table id="login-form-table">
+                                <tr>
+                                    <th><label for="username">Username:</label></th>
+                                    <td><input autocomplete="username" autofocus class="form-control esc-input reset-on-change" id="username" minlength="5" name="username" placeholder="Username" type="text"></td>
+                                </tr>
+
+                                <tr>
+                                    <th><label for="password">Password:</label></th>
+                                    <td><input autocomplete="current-password" class="form-control esc-input reset-on-change" id="password" minlength="5" name="password" placeholder="Password" type="password"></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-outline-light px-5" type="submit" id="submit-btn">
+                                        Enter <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                    </button>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

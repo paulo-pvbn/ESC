@@ -1,0 +1,5 @@
+ESC/docker/esc_app/esc_db/data/*
+**/__pycache__
+**/migrations
+**/node_modules
+ESC_Backend/esc/storage

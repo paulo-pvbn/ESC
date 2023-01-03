@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>ESC - Evicence Safe Chain</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="esc-nav-group" id="nav-logo">
+                <a class="e-nav-link" id="logo-link" href="/" title="Evidence Secure Chain"><img src="images/logo.svg" id="logo" alt="logo"></a> <a class="e-nav-link-logo" href="/" title="Evidence Secure Chain">ESC</a>
+            </div>
+            <div class="esc-nav-group" id="nav-left">
+                <a class="e-nav-link" href="cases.html">Cases</a>
+                <a class="e-nav-link">Access Control</a>
+            </div>
+            <div id="nav-center">
+
+            </div>
+            <div class="esc-nav-group" id="nav-right">
+                <a class="e-nav-link" href="register.html">Register</a>
+                <a class="e-nav-link" href="login.html">Login</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="esc-container">
+            <div id="esc-page-title">
+
+                <img src="images/security.svg" id="esc-title-icon" alt="Security Icon">
+
+                <div id="esc-title-text">
+                    <h2>User Registration</h2>
+                </div>
+            </div>
+            <div class="esc-section">
+                <div class="esc-form-container">
+                    <form action="/myfutureAWSApp/contact" METHOD="POST" id="contact-form">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="Eh2nOggi3LGwZQIuQKk0HYNMzTIcAQsiPndJo2eZHiUyapQKPFD0VH58RE9VIPBm">
+
+                        <table>
+                            <tr>
+                                <!-- mx-auto w-auto  -->
+                                <th><label for="name">Choose a username:</label></th>
+                                <td><input autocomplete="username" autofocus class="form-control esc-input reset-on-change" id="username" minlength="5" name="username" placeholder="Username" type="text"></td>
+                            </tr>
+
+                            <tr>
+                                <!-- mx-auto w-auto  -->
+                                <th><label for="name">Choose a password:</label></th>
+                                <td><input autocomplete="new-password" class="form-control esc-input reset-on-change" id="password" minlength="5" name="password" placeholder="Password" type="password"></td>
+                            </tr>
+
+                            <tr>
+                                <!-- mx-auto w-auto  -->
+                                <th><label for="name">Enter the same password again:</label></th>
+                                <td><input autocomplete="new-password" class="form-control esc-input reset-on-change" id="confirm" minlength="5" name="confirm" placeholder="Password Confirmation" type="password"></td>
+                            </tr>
+
+                            <tr>
+                                <!-- mx-auto w-auto  -->
+                                <th><label for="name">Choose a username:</label></th>
+                                <td><input autocomplete="username" class="form-control esc-input reset-on-change" id="username" minlength="5" name="username" placeholder="Username" type="text"></td>
+                            </tr>
+
+                            <tr>
+                                <th><label for="company">Employee Name:</label></th>
+                                <td><input autocomplete="name" class="form-control esc-input reset-on-change" id="username" minlength="5" name="name" placeholder="Full Name" type="text"></td>
+                            </tr>
+
+                            <tr>
+                                <th><label for="profile">Profile / Use Case:</label></th>
+                                <td>
+                                    <select name="profile" id="profile" class="form-control esc-input">
+                                <option disabled="" selected="">Why are you requesting access?</option>
+                                <option value="1">I am a Law Enforcement or Justice Server</option>
+                                <option value="2">I work for an Internet Content/Service Provider</option>
+                                <option value="3">I am a Lawyer</option>
+                              </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th><label for="company">Company / Service Provider:</label></th>
+                                <td>
+                                    <select name="company" id="company" class="form-control esc-input">
+                                <option disabled="" selected="">Please Select</option>
+                                <option value="1">Apple</option>
+                                <option value="2">Google</option>
+                                <option value="3">Microsoft</option>
+                              </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th><label for="email">Employee e-mail (Will be used for important system notifications):</label></th>
+                                <td><input type="email" id="email" name="name" maxlength="50" minlength="2" required class="form-control esc-input reset-on-change" placeholder="Work e-mail address" autocomplete="email"></td>
+                            </tr>
+
+                            <!-- <tr>
+                                <th><label for="message">Additional Information:</label></th>
+                                <td><textarea id="additional-info" name="additional-info" cols="80" rows="10" class="form-control esc-input reset-on-change" placeholder="Any other information regarding your access request.">
+                                </textarea>
+                                </td>
+                            </tr> -->
+
+                            <tr>
+                                <td>
+                                </td>
+                                <td>
+                                    <button class="btn btn-outline-light px-5" type="submit">
+                                    Submit <i class="fa fa-check" aria-hidden="true"></i>
+                                </button>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

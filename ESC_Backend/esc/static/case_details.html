@@ -1,0 +1,222 @@
+
+        <div class="esc-container">
+            <div id="esc-page-title">
+
+                <img src="images/scale.svg" id="esc-title-icon" alt="Security Icon">
+
+                <div id="esc-title-text">
+                    <h2 id="title-header">Case 002 - Golden Eye</h2>
+                </div>
+            </div>
+            <div class="esc-section">
+                <ul class="nav nav-tabs esc-nav-tabs" id="casosTab" role="tablist">
+                    <!-- style="border-color: darkgrey;" -->
+                    <li class="nav-item esc-nav-item" role="presentation">
+                        <button class="nav-link esc-nav-link active" id="proc-tab" data-bs-target="#proc-tab-pane"
+                            data-bs-toggle="tab" type="button" role="tab" aria-controls="proc-tab-pane" aria-selected="true">
+                            Procedure <i class="fa fa-balance-scale" aria-hidden="true"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item esc-nav-item ecs-exists" role="presentation">
+                        <button class="nav-link esc-nav-link" id="evid-tab" data-bs-target="#evid-tab-pane"
+                            data-bs-toggle="tab" type="button" role="tab" aria-controls="evid-tab-pane" aria-selected="false">
+                            Evidences <i class="fa fa-book" aria-hidden="true"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item  esc-nav-item ecs-exists" role="presentation">
+                        <button class="nav-link esc-nav-link" id="logs-tab" data-bs-target="#logs-tab-pane"
+                                data-bs-toggle="tab" type="button" role="tab" aria-controls="logs-tab-pane" aria-selected="false">
+                                Logs / Chain of Custody <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                            </button>
+                        </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="proc-tab-pane" role="tabpanel" aria-labelledby="proc-tab" tabindex="0">
+
+                        <div class="esc-form-container caseproc-form-container">
+                            <form METHOD="POST" id="case-proc-form">
+                                <!-- <input type="hidden" name="csrfmiddlewaretoken" value="Eh2nOggi3LGwZQIuQKk0HYNMzTIcAQsiPndJo2eZHiUyapQKPFD0VH58RE9VIPBm"> -->
+
+                                <div class="esc-table" id="caseproc-table">
+                                    <!-- header -->
+                                    <div class="ecs-tr-casoprocform">
+                                        <div class="ecs-th"><span class="ecs-tcontend">
+                                                <label for="name">Name:</label>
+                                        </span></div>
+                                        <div class="ecs-th"><span class="ecs-tcontend">
+                                                <input autocomplete="off" autofocus class="form-control esc-input reset-on-change esc-form-data" id="name" minlength="5" maxlength="100" name="name" 
+                                                placeholder="Name for the Crinminal Case / Operation" type="text">
+                                        </span></div>
+                                    </div>
+                                    <div class="ecs-tr-casoprocform">
+                                        <div class="ecs-th"><span class="ecs-tcontend">
+                                                <label for="procnum">Process/Procedure Number:</label>
+                                        </span></div>
+                                        <div class="ecs-th"><span class="ecs-tcontend">
+                                                <input autocomplete="off" autofocus class="form-control esc-input reset-on-change esc-form-data" id="procedure_number" minlength="5" maxlength="100"  name="procedure_number" 
+                                                placeholder="Indentifying Number in Court or Police Department" type="text">
+                                        </span></div>
+                                    </div>
+                                    <div class="ecs-tr-casoprocform ecs-exists">
+                                        <div class="ecs-th"><span class="ecs-tcontend">
+                                                <label for="creationDate">Creation:</label>
+                                        </span></div>
+                                        <div class="ecs-th"><span class="ecs-tcontend">
+                                                Created by user <span id="creation_user_fullname" class="esc-form-data"></span> on <span id="formated_date" class="esc-form-data"></span>
+                                        </span></div>
+                                    </div>
+                                    <div class="ecs-tr-casoprocform">
+                                        <div class="ecs-th"><span class="ecs-tcontend">
+                                                
+                                        </span></div>
+                                        <div class="ecs-th"><span class="ecs-tcontend">
+                                            <button class="btn btn-outline-light px-5 esc-button profile profile-1" type="submit">
+                                                Save <i class="fa fa-check" aria-hidden="true"></i>
+                                            </button>
+                                        </span></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="evid-tab-pane" role="tabpanel" aria-labelledby="evid-tab" tabindex="0">
+                        <div id="expand-form-btn-container">
+                            <button type="button" class="btn btn-outline-light profile profile-2" id="expand-form-btn"> 
+                            <!-- data-bs-toggle="collapse" data-bs-target="#send-form-collapsable" aria-expanded="false" aria-controls="send-form-collapsable"> -->
+                                Send Evidence File
+                                <i class="fa fa-chevron-up"></i>
+                            </button>
+                        </div>
+                        <div class="collapse hide" id="send-form-collapsable">
+                            <div class="esc-form-container caseproc-form-container">
+                                <form action="" METHOD="POST" id="contact-form">
+                                    
+                                    <div class="esc-table" id="caseproc-table">
+                                        <!-- header -->
+                                        <div class="ecs-tr-casoprocform">
+                                            <div class="ecs-th"><span class="ecs-tcontend">
+                                                    <label for="name">Type of Operation:</label>
+                                            </span></div>
+                                            <div class="ecs-th"><span class="ecs-tcontend">
+                                                <select class="form-select" aria-label="Type of File Submission" id="submit-type" required>
+                                                    <option disabled="" selected="">Select</option>
+                                                    <option value="1">I want to upload the file directly.</option>
+                                                    <option value="2">I want to provide a download URL and access code for the file.</option>
+                                                  </select>
+                                            </span></div>
+                                         </div>
+                                        
+                                         <div id="upload-form">
+                                            <div class="ecs-tr-filepond">
+                                                <div class="ecs-th"><span class="ecs-tcontend">
+                                                        <label for="formFile" class="form-label">File to Upload:</label>
+                                                </span></div>
+                                                <div class="ecs-td"><span class="ecs-tcontend">
+                                              
+                                                        <input class="form-control" type="file" id="formFile">
+                                    
+                                                </span></div>
+                                            </div>
+                                    
+                                            <div class="ecs-tr-casoprocform" id="textarea-hash-row">
+                                                <div class="ecs-th"><span class="ecs-tcontend ecs-textarea-label">
+                                                    <label for="name">Hash of the file:</label>
+                                                </span></div>
+                                                <div class="ecs-th"><span class="ecs-tcontend">
+                                                    <textarea class="form-control" name="hash" id="hash-upload" required>
+                                                    </textarea>
+                                                </span></div>
+                                            </div>
+                                             <div class="ecs-tr-casoprocform esc-table-footer">
+                                                <div class="ecs-th"><span class="ecs-tcontend">
+                                                        
+                                                </span></div>
+                                                <div class="ecs-th"><span class="ecs-tcontend">
+                                                    <button class="btn btn-outline-light px-5 esc-button" type="submit" id="upload-button">
+                                                        Save and Upload <i class="fa fa-upload" aria-hidden="true"></i>
+                                                    </button>
+                                                </span></div>
+                                             </div>
+                                        </div>
+
+                                        <div id="url-form">
+                                            <div class="ecs-tr-casoprocform">
+                                                <div class="ecs-th"><span class="ecs-tcontend">
+                                                        <label for="name">URL for file download:</label>
+                                                </span></div>
+                                                <div class="ecs-th"><span class="ecs-tcontend">
+                                                    <input class="form-control esc-input reset-on-change" type="url" name="url" id="url"
+                                                    placeholder="https://example.com"
+                                                    pattern="https://.*"
+                                                    required>
+                                                </span></div>
+                                            </div>
+                                            <div class="ecs-tr-casoprocform" id="textarea-hash-row">
+                                                <div class="ecs-th"><span class="ecs-tcontend ecs-textarea-label">
+                                                    <label for="name">API Access Key:</label>
+                                                </span></div>
+                                                <div class="ecs-th"><span class="ecs-tcontend">
+                                                    <textarea class="form-control" name="hash" required>
+                                                    </textarea>
+                                                </span></div>
+                                            </div>
+                                    
+                                            <div class="ecs-tr-casoprocform" id="textarea-hash-row">
+                                                <div class="ecs-th"><span class="ecs-tcontend ecs-textarea-label">
+                                                    <label for="name">Hash of the file:</label>
+                                                </span></div>
+                                                <div class="ecs-th"><span class="ecs-tcontend">
+                                                    <textarea class="form-control" name="hash" required>
+                                                    </textarea>
+                                                </span></div>
+                                            </div>
+                                             <div class="ecs-tr-casoprocform esc-table-footer">
+                                                <div class="ecs-th"><span class="ecs-tcontend">
+                                                        
+                                                </span></div>
+                                                <div class="ecs-th"><span class="ecs-tcontend">
+                                                    <button class="btn btn-outline-light px-5 esc-button" type="submit" id="upload-button">
+                                                        Save <i class="fa fa-check" aria-hidden="true"></i>
+                                                    </button>
+                                                </span></div>
+                                             </div>
+                                        </div>
+                                         
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="collapse hide" id="evid-table-collapsable">
+                            <div class="esc-table" id="evid-table">
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="logs-tab-pane" role="tabpanel" aria-labelledby="logs-tab" tabindex="0">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                            id="select-evidence-btn">
+                              All Case Evidences / Files
+                            </button>
+                            <ul class="dropdown-menu" id="evid-dropdown">
+                            
+                            </ul>
+                        </div>
+                        
+                        <div class="esc-table" id="hist-table">
+
+        
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+           
+        </div>
+    
