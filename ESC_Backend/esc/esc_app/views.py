@@ -217,10 +217,14 @@ class EvidencesAPIView(APIView):
 
         app_storage = FileSystemStorage(location=config.STORAGE)
 
-        target_location = os.path.join(f'Case_{case_id}', 'evidences', received_file.name)
+        # Sanitize the incoming file name to avoid path traversal
+        safe_name = os.path.basename(received_file.name)
+        target_location = os.path.join(f'Case_{case_id}', 'evidences', safe_name)
         
-        if app_storage.exists(target_location): #File with the same name previously sent. Renames the file with a sufix.
-            extension_dot = target_location.rindex('.')
+        if app_storage.exists(target_location):  # File with the same name previously sent. Renames the file with a suffix.
+            extension_dot = target_location.rfind('.')
+            if extension_dot == -1:
+                extension_dot = len(target_location)
 
             #Tenta gerar um novo nome para o arquivo com sufixos numéricos até encontrar um nome não existente
             #--------------------------------
@@ -281,7 +285,8 @@ def download_evidence_file(self, request, evidence_file):
     
     app_storage = FileSystemStorage(location=config.STORAGE)
 
-    target_location = os.path.join(f'Case_{evidence_file.case_id}', 'evidences', evidence_file.filename)
+    filename = os.path.basename(evidence_file.filename)
+    target_location = os.path.join(f'Case_{evidence_file.case_id}', 'evidences', filename)
 
     # Open the file from storage
     file = app_storage.open(target_location, 'rb')
