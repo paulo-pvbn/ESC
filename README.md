@@ -56,25 +56,26 @@ The application built here provides the following basic funcionalities:
             - serializers.py: Django REST serializers
             - urls.py: uri paths for all the REST APIs
             - views.py: Django REST APIView classes for all the REST APIs.
-        * static: HTML, CSS and JS files server by django. To be migrated in the future to a proper HTTP static file server.
+        * static: HTML and CSS files served by Django
             * images
-            * node_modules: @popperjs, bootstrap and font-awesome
-            * scripts
-                - app.js: basic routing
-                - components.js: Components of the single page application and some helper functions.
             * styles
                 - Roboto-Regular.ttf - Google Font
-                - styles.css - application CSS file (Not a bootstrap application. Pure CSS with some bootstrap components).
-            - case_details.html: Template for the CaseDetails JS component
-            - cases.html: Template for the Cases (list) JS component
-            - index.html - Entry point for the application
-            - login.html -Template for the Login component.
+                - styles.css - application CSS file
+            - case_details.html: Legacy template
+            - cases.html: Legacy template
+            - index.html - Legacy entry point
+            - login.html - Legacy login component
             - logo.svg - Logo for the application menu
             - package.json - required node_modules
             - register.html - Template for the future register form
+        * templates: Django templates rendered by views (index and login)
+            - base.html
+            - index.html
+            - login.html
         * storage: Preconfigured storage folder where evidence files will be stored. This location can be changed to any folder by manipulating config.py.
     - requirements.txt: Python requirements to be used with python -m pip install -r requirements.txt
     - ESC.code-workspace: VSCode workspace file in order to facilitate dev environment creation
+    - blockchain_gui.py: Simple Tkinter interface to view case history through the REST API
 
 #### Setup:
 ##### Create and run the postgreSQL instance:
@@ -105,8 +106,10 @@ The application built here provides the following basic funcionalities:
 - If a case already existed, one could use this form to grant access to a case
 
 ##### Using the application:
-- Access http://localhost:8000/static/index.html
-- Login with a user created with the django admin. The user must have been assigned a profile.
+- Open http://localhost:8000/esc/login/ and authenticate with a user created with the django admin.
+- After login you will see a list of cases rendered by Django templates.
+- Alternatively, run `python blockchain_gui.py` to open a Tkinter interface for browsing
+  case history using the REST API.
 
 
 #### Future Updates:

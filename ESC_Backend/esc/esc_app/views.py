@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from django.core.files.storage import FileSystemStorage
 from django.db import transaction
 from django.db.models import Q
@@ -21,8 +23,27 @@ import os
 from . import config
 
 # Create your views here.
+@login_required
 def index(request):
-    return HttpResponse('Working <img src="/static/logo.svg" style="width: 50px">')
+    current_user = AppUser.objects.get(user=request.user)
+    cases = current_user.cases.all().order_by('id')
+    return render(request, 'index.html', {'cases': cases})
+
+def login_view(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+        if user:
+            login(request, user)
+            return redirect('index')
+        else:
+            return render(request, 'login.html', {'error': 'Invalid credentials'})
+    return render(request, 'login.html')
+
+def logout_view(request):
+    logout(request)
+    return redirect('login')
 
 class CasesAPIView(APIView):
     permission_classes = [permissions.IsAuthenticated]

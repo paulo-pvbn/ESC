@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Cases</h1>
+<ul>
+    {% for case in cases %}
+    <li>{{ case.name }} ({{ case.id }}) - {{ case.procedure_number }}</li>
+    {% empty %}
+    <li>No cases available.</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'logout_view' %}">Logout</a>
+{% endblock %}
