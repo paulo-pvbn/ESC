@@ -10,3 +10,4 @@ SQLAlchemy==1.4.29
 sqlparse==0.4.1
 gunicorn==20.1.0
 django-cors-headers
+pycryptodome

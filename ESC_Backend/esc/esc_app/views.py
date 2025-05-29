@@ -19,6 +19,7 @@ import logging
 import os
 
 from . import config
+from .blockchain import Blockchain
 
 # Create your views here.
 def index(request):
@@ -162,7 +163,13 @@ class EvidencesAPIView(APIView):
 
         if evidence_id is not None:
             evidence_file = case.evidence_files.get(id=evidence_id) 
-            EvidenceHistory.objects.create(evidence_file=evidence_file, operation=EvidenceHistory.Operation.DOWNLOADED_BY_USER, case=case, user=request.user)
+            history = EvidenceHistory.objects.create(
+                evidence_file=evidence_file,
+                operation=EvidenceHistory.Operation.DOWNLOADED_BY_USER,
+                case=case,
+                user=request.user
+            )
+            Blockchain.create_block(history)
               
             return download_evidence_file(self, request, evidence_file)
         else:
@@ -232,7 +239,13 @@ class EvidencesAPIView(APIView):
                 case.status = Case.Status.FILES_RECEIVED
                 case.save()
 
-                EvidenceHistory.objects.create(evidence_file=evidence, operation=EvidenceHistory.Operation.UPLOADED, case=case, user=request.user)
+                history = EvidenceHistory.objects.create(
+                    evidence_file=evidence,
+                    operation=EvidenceHistory.Operation.UPLOADED,
+                    case=case,
+                    user=request.user
+                )
+                Blockchain.create_block(history)
               
                 #Reads the whole case again, in order to show updates evicence file list and history
                 case = current_user.cases.get(id=case_id)

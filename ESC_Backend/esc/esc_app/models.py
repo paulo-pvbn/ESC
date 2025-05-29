@@ -101,3 +101,13 @@ class EvidenceHistory(models.Model):
     def __str__(self):
         return f"{self.id} - case: {self.case_id} - evidence {self.evidence_file_id} - operation {self.operation}"
 
+
+class BlockchainBlock(models.Model):
+    index = models.IntegerField(unique=True)
+    previous_hash = models.CharField(max_length=64)
+    hash = models.CharField(max_length=64)
+    history = models.OneToOneField(EvidenceHistory, on_delete=models.CASCADE)
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Block {self.index}"

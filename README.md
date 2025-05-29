@@ -83,12 +83,13 @@ The application built here provides the following basic funcionalities:
 
 ##### Install the python packages in the selected venv:
 - cd ..\ESC_Backend
-- python -m pip install -r requirements.txt
+- python -m pip install -r requirements.txt  # now includes pycryptodome
 
 ##### Migrate the database using django:
 - cd esc (folder that contains manage.py)
 - python manage.py makemigrations
 - python manage.py migrate
+# the command above will create the BlockchainBlock table used by the blockchain module
 
 ##### Create django superuser:
 - python manage.py createsuperuser
