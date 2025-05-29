@@ -75,6 +75,7 @@ The application built here provides the following basic funcionalities:
         * storage: Preconfigured storage folder where evidence files will be stored. This location can be changed to any folder by manipulating config.py.
     - requirements.txt: Python requirements to be used with python -m pip install -r requirements.txt
     - ESC.code-workspace: VSCode workspace file in order to facilitate dev environment creation
+    - blockchain_gui.py: Simple Tkinter interface to view case history through the REST API
 
 #### Setup:
 ##### Create and run the postgreSQL instance:
@@ -107,6 +108,8 @@ The application built here provides the following basic funcionalities:
 ##### Using the application:
 - Access http://localhost:8000/static/index.html
 - Login with a user created with the django admin. The user must have been assigned a profile.
+- Alternatively, run `python blockchain_gui.py` to open a Tkinter interface for browsing
+  case history using the REST API.
 
 
 #### Future Updates:
